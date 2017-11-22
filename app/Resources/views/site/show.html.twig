@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Site</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Sitenom</th>
+                <td>{{ site.sitenom }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ site.type }}</td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td>{{ site.longitude }}</td>
+            </tr>
+            <tr>
+                <th>Latitude</th>
+                <td>{{ site.latitude }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ site.description }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ site.ville }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ site.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Svalide</th>
+                <td>{% if site.svalide %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Siteid</th>
+                <td>{{ site.siteid }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('site_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('site_edit', { 'siteid': site.siteid }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

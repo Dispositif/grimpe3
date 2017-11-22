@@ -1,0 +1,54 @@
+language: php
+php:
+  - '5.6'
+  - '7.0'
+  - '7.1'
+  - nightly
+
+# Use fast containers instead of the slower sudo-enabled VMs:
+sudo: false
+
+env:
+  global:
+  - travis=ok
+
+branches:
+    only:
+        - master
+        - develop
+        
+services:
+  - mysql
+
+#mysql:
+#  database: grimpe
+#  username: root
+#  encoding: utf8
+#pass = ''
+
+before_install:
+  - mysql -e 'CREATE DATABASE symfony;'
+
+notifications:
+  email:
+    - travis-ci@kitpages.fr
+
+#install: php vendor/vendors.php
+install:
+  # add composer's global bin directory to the path
+  # see: https://github.com/drush-ops/drush#install---composer
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+before_script: 
+  - composer install --dev --quiet --no-interaction
+  - echo 'date.timezone = "Europe/Paris"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+  #- composer install --dev
+
+#phpunit --configuration $DB.phpunit.xml
+
+#script: phpunit --coverage-text
+
+notifications:
+  email: false
+
+

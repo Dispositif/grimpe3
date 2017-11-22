@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Region</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Rnom</th>
+                <td>{{ region.rnom }}</td>
+            </tr>
+            <tr>
+                <th>Rlatitude</th>
+                <td>{{ region.rlatitude }}</td>
+            </tr>
+            <tr>
+                <th>Rlongitude</th>
+                <td>{{ region.rlongitude }}</td>
+            </tr>
+            <tr>
+                <th>Rid</th>
+                <td>{{ region.rid }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('region_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('region_edit', { 'rid': region.rid }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

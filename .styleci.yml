@@ -1,0 +1,23 @@
+preset: recommended
+
+risky: false
+
+disabled:
+  - align_double_arrow
+  - short_array_syntax
+
+finder:
+  exclude:
+    - "tests"
+  name:
+    - "*.php"
+  not-name:
+    - "*Stub.php"
+  not-contains:
+    - "config"
+  path:
+    - "foo/Stuff"
+  not-path:
+    - "libraries"
+  depth:
+    - "< 3"

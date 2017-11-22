@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Membres list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Password</th>
+                <th>Isadmin</th>
+                <th>Datecreated</th>
+                <th>Lastdate</th>
+                <th>Lastip</th>
+                <th>Telephone</th>
+                <th>Avatar</th>
+                <th>Niveaumin</th>
+                <th>Niveaumax</th>
+                <th>Meval</th>
+                <th>Emailvalide</th>
+                <th>Idmembre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for membre in membres %}
+            <tr>
+                <td><a href="{{ path('membre_show', { 'idmembre': membre.idmembre }) }}">{{ membre.email }}</a></td>
+                <td>{{ membre.nom }}</td>
+                <td>{{ membre.prenom }}</td>
+                <td>{{ membre.password }}</td>
+                <td>{{ membre.isadmin }}</td>
+                <td>{% if membre.datecreated %}{{ membre.datecreated|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if membre.lastdate %}{{ membre.lastdate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ membre.lastip }}</td>
+                <td>{{ membre.telephone }}</td>
+                <td>{{ membre.avatar }}</td>
+                <td>{{ membre.niveaumin }}</td>
+                <td>{{ membre.niveaumax }}</td>
+                <td>{{ membre.meval }}</td>
+                <td>{{ membre.emailvalide }}</td>
+                <td>{{ membre.idmembre }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('membre_show', { 'idmembre': membre.idmembre }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

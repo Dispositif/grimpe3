@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Membre</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Email</th>
+                <td>{{ membre.email }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ membre.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ membre.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ membre.password }}</td>
+            </tr>
+            <tr>
+                <th>Isadmin</th>
+                <td>{{ membre.isadmin }}</td>
+            </tr>
+            <tr>
+                <th>Datecreated</th>
+                <td>{% if membre.datecreated %}{{ membre.datecreated|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Lastdate</th>
+                <td>{% if membre.lastdate %}{{ membre.lastdate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Lastip</th>
+                <td>{{ membre.lastip }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ membre.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Avatar</th>
+                <td>{{ membre.avatar }}</td>
+            </tr>
+            <tr>
+                <th>Niveaumin</th>
+                <td>{{ membre.niveaumin }}</td>
+            </tr>
+            <tr>
+                <th>Niveaumax</th>
+                <td>{{ membre.niveaumax }}</td>
+            </tr>
+            <tr>
+                <th>Meval</th>
+                <td>{{ membre.meval }}</td>
+            </tr>
+            <tr>
+                <th>Emailvalide</th>
+                <td>{{ membre.emailvalide }}</td>
+            </tr>
+            <tr>
+                <th>Idmembre</th>
+                <td>{{ membre.idmembre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('membre_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

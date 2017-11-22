@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Regions list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rnom</th>
+                <th>Rlatitude</th>
+                <th>Rlongitude</th>
+                <th>Rid</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for region in regions %}
+            <tr>
+                <td><a href="{{ path('region_show', { 'rid': region.rid }) }}">{{ region.rnom }}</a></td>
+                <td>{{ region.rlatitude }}</td>
+                <td>{{ region.rlongitude }}</td>
+                <td>{{ region.rid }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('region_show', { 'rid': region.rid }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('region_edit', { 'rid': region.rid }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('region_new') }}">Create a new region</a>
+        </li>
+    </ul>
+{% endblock %}
