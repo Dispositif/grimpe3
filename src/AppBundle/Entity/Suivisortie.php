@@ -15,7 +15,7 @@ class Suivisortie
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="ssdate", type="datetime", nullable=false)
+     * @ORM\Column(name="ssdate", type="datetime", options={"default": 0})
      */
     private $ssdate;
 
@@ -50,7 +50,7 @@ class Suivisortie
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Membre")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="ssmembre", referencedColumnName="idmembre")
+     *   @ORM\JoinColumn(name="ssmembre", referencedColumnName="id")
      * })
      */
     private $ssmembre;

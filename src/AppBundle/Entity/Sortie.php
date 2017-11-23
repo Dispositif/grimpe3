@@ -17,35 +17,35 @@ class Sortie
      *
      * @ORM\Column(name="date", type="datetime", nullable=false)
      */
-    private $date;
+    protected $date;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="datecreated", type="datetime", nullable=false)
+     * @ORM\Column(name="datecreated", type="datetime", options={"default": 0})
      */
-    private $datecreated;
+    protected $datecreated;
 
     /**
      * @var string
      *
      * @ORM\Column(name="annonce", type="text", length=16777215, nullable=true)
      */
-    private $annonce;
+    protected $annonce;
 
     /**
      * @var string
      *
      * @ORM\Column(name="niveaumin", type="string", length=10, nullable=true)
      */
-    private $niveaumin;
+    protected $niveaumin;
 
     /**
      * @var string
      *
      * @ORM\Column(name="niveaumax", type="string", length=10, nullable=true)
      */
-    private $niveaumax;
+    protected $niveaumax;
 
     /**
      * @var integer
@@ -54,7 +54,7 @@ class Sortie
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idsortie;
+    protected $idsortie;
 
     /**
      * @var \AppBundle\Entity\Site
@@ -64,17 +64,17 @@ class Sortie
      *   @ORM\JoinColumn(name="ssite", referencedColumnName="siteid")
      * })
      */
-    private $ssite;
+    protected $ssite;
 
     /**
      * @var \AppBundle\Entity\Membre
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Membre")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="organisateur", referencedColumnName="idmembre")
+     *   @ORM\JoinColumn(name="organisateur", referencedColumnName="id")
      * })
      */
-    private $organisateur;
+    protected $organisateur;
 
 
 

@@ -27,7 +27,7 @@ class MembreController extends Controller
         $membres = $em->getRepository('AppBundle:Membre')->findAll();
 
         return $this->render('membre/index.html.twig', array(
-            'membres' => $membres,
+            'membres' => $membres
         ));
     }
 
@@ -41,7 +41,7 @@ class MembreController extends Controller
     {
 
         return $this->render('membre/show.html.twig', array(
-            'membre' => $membre,
+            'membre' => $membre
         ));
     }
 }

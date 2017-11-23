@@ -9,27 +9,42 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
-class NewsType extends AbstractType
+class SortieType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('date', DateTimeType::class)
-        ->add('titre', null, ['attr' => ['class'=> 'form-control']])
-        ->add('contenu', TextareaType::class, [
+        $builder
+            ->add('date', DateTimeType::class, array(
+            /*'placeholder' => array(
+                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                    'hour' => 'Hour', 'minute' => 'Minute', 'second' => 'Second',
+                    ) */
+            ))
+            //->add('datecreated')
+            ->add('annonce', TextareaType::class, [
                     'attr' => ['cols' => "40", 'rows'=>"5", 'class'=> 'form-control']
                     ] )
-        ->add('nauteur', EntityType::class , array(
+            ->add('niveaumin', null, ['attr' => ['class'=> 'form-control']])
+            ->add('niveaumax', null, ['attr' => ['class'=> 'form-control']])
+            ->add('ssite', EntityType::class , array(
+                    'class'=> 'AppBundle:Site',
+                    'label'=> 'Site',
+                    'choice_label' => 'sitenom',
+                    'multiple' => false,
+                    'attr' => ['class'=> 'form-control']
+                ))
+            ->add('organisateur', EntityType::class , array(
                     'class'=> 'AppBundle:Membre',
-                    'label'=> 'Auteur',
+                    'label'=> 'Organisateur',
                     'choice_label' => 'email',
                     'multiple' => false,
-                    'required' => true,
                     'attr' => ['class'=> 'form-control']
                 ));
     }
@@ -40,7 +55,7 @@ class NewsType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\News'
+            'data_class' => 'AppBundle\Entity\Sortie'
         ));
     }
 
@@ -49,7 +64,7 @@ class NewsType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'appbundle_news';
+        return 'appbundle_sortie';
     }
 
 

@@ -22,7 +22,7 @@ class Commentaire
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="datetime", nullable=true)
+     * @ORM\Column(name="date", type="datetime", options={"default": 0})
      */
     private $date;
 
@@ -47,7 +47,7 @@ class Commentaire
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Membre")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="cauteur", referencedColumnName="idmembre")
+     *   @ORM\JoinColumn(name="cauteur", referencedColumnName="id")
      * })
      */
     private $cauteur;
@@ -67,7 +67,7 @@ class Commentaire
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Membre")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="alerteuser", referencedColumnName="idmembre")
+     *   @ORM\JoinColumn(name="alerteuser", referencedColumnName="id")
      * })
      */
     private $alerteuser;

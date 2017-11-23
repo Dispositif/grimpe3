@@ -15,7 +15,7 @@ class News
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="datetime", nullable=true)
+     * @ORM\Column(name="date", type="datetime", options={"default": 0})
      */
     private $date;
 
@@ -47,7 +47,7 @@ class News
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Membre")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="nauteur", referencedColumnName="idmembre")
+     *   @ORM\JoinColumn(name="nauteur", referencedColumnName="id")
      * })
      */
     private $nauteur;

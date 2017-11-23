@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sortie</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Date</th>
+                <td>{% if sortie.date %}{{ sortie.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Datecreated</th>
+                <td>{% if sortie.datecreated %}{{ sortie.datecreated|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Annonce</th>
+                <td>{{ sortie.annonce }}</td>
+            </tr>
+            <tr>
+                <th>Niveaumin</th>
+                <td>{{ sortie.niveaumin }}</td>
+            </tr>
+            <tr>
+                <th>Niveaumax</th>
+                <td>{{ sortie.niveaumax }}</td>
+            </tr>
+            <tr>
+                <th>Idsortie</th>
+                <td>{{ sortie.idsortie }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sortie_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('sortie_edit', { 'idsortie': sortie.idsortie }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

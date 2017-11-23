@@ -1,153 +1,95 @@
 <?php
 
+// src/Entity/Membre.php
+
 namespace AppBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Membre
- *
- * @ORM\Table(name="membre")
  * @ORM\Entity
+ * @ORM\Table(name="fos_user")
  */
-class Membre
+class Membre extends BaseUser
 {
+
     /**
-     * @var string
-     *
-     * @ORM\Column(name="email", unique=true, type="string", length=50, nullable=false)
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $email;
+    protected $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=30, nullable=true)
      */
-    private $nom;
+    protected $nom;
 
     /**
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=30, nullable=true)
      */
-    private $prenom;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=150, nullable=false)
-     */
-    private $password;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="isadmin", type="smallint", nullable=false)
-     */
-    private $isadmin;
+    protected $prenom;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="datecreated", type="datetime", nullable=false)
+     * @ORM\Column(name="datecreated", type="datetime", nullable=true, options={"default": 0} )
      */
-    private $datecreated;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="lastdate", type="datetime", nullable=false)
-     */
-    private $lastdate;
+    protected $datecreated;
 
     /**
      * @var string
      *
      * @ORM\Column(name="lastip", type="string", length=50, nullable=true)
      */
-    private $lastip;
+    protected $lastip;
 
     /**
      * @var string
      *
      * @ORM\Column(name="telephone", type="string", length=20, nullable=true)
      */
-    private $telephone;
+    protected $telephone;
 
     /**
      * @var string
      *
      * @ORM\Column(name="avatar", type="string", length=250, nullable=true)
      */
-    private $avatar;
+    protected $avatar;
 
     /**
      * @var string
      *
      * @ORM\Column(name="niveaumin", type="string", length=10, nullable=true)
      */
-    private $niveaumin;
+    protected $niveaumin;
 
     /**
      * @var string
      *
      * @ORM\Column(name="niveaumax", type="string", length=10, nullable=true)
      */
-    private $niveaumax;
+    protected $niveaumax;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="meval", type="float", precision=10, scale=0, nullable=false)
+     * @ORM\Column(name="eval", type="float", precision=10, scale=0, nullable=true)
      */
-    private $meval;
+    protected $eval;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="emailvalide", type="integer", nullable=false)
-     */
-    private $emailvalide;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="idmembre", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idmembre;
-
-
-
-    /**
-     * Set email
-     *
-     * @param string $email
-     * @return Membre
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get email
-     *
-     * @return string 
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
 
     /**
      * Set nom
      *
      * @param string $nom
+     *
      * @return Membre
      */
     public function setNom($nom)
@@ -160,7 +102,7 @@ class Membre
     /**
      * Get nom
      *
-     * @return string 
+     * @return string
      */
     public function getNom()
     {
@@ -171,6 +113,7 @@ class Membre
      * Set prenom
      *
      * @param string $prenom
+     *
      * @return Membre
      */
     public function setPrenom($prenom)
@@ -183,7 +126,7 @@ class Membre
     /**
      * Get prenom
      *
-     * @return string 
+     * @return string
      */
     public function getPrenom()
     {
@@ -191,55 +134,10 @@ class Membre
     }
 
     /**
-     * Set password
-     *
-     * @param string $password
-     * @return Membre
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Get password
-     *
-     * @return string 
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    /**
-     * Set isadmin
-     *
-     * @param integer $isadmin
-     * @return Membre
-     */
-    public function setIsadmin($isadmin)
-    {
-        $this->isadmin = $isadmin;
-
-        return $this;
-    }
-
-    /**
-     * Get isadmin
-     *
-     * @return integer 
-     */
-    public function getIsadmin()
-    {
-        return $this->isadmin;
-    }
-
-    /**
      * Set datecreated
      *
      * @param \DateTime $datecreated
+     *
      * @return Membre
      */
     public function setDatecreated($datecreated)
@@ -252,7 +150,7 @@ class Membre
     /**
      * Get datecreated
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDatecreated()
     {
@@ -260,32 +158,10 @@ class Membre
     }
 
     /**
-     * Set lastdate
-     *
-     * @param \DateTime $lastdate
-     * @return Membre
-     */
-    public function setLastdate($lastdate)
-    {
-        $this->lastdate = $lastdate;
-
-        return $this;
-    }
-
-    /**
-     * Get lastdate
-     *
-     * @return \DateTime 
-     */
-    public function getLastdate()
-    {
-        return $this->lastdate;
-    }
-
-    /**
      * Set lastip
      *
      * @param string $lastip
+     *
      * @return Membre
      */
     public function setLastip($lastip)
@@ -298,7 +174,7 @@ class Membre
     /**
      * Get lastip
      *
-     * @return string 
+     * @return string
      */
     public function getLastip()
     {
@@ -309,6 +185,7 @@ class Membre
      * Set telephone
      *
      * @param string $telephone
+     *
      * @return Membre
      */
     public function setTelephone($telephone)
@@ -321,7 +198,7 @@ class Membre
     /**
      * Get telephone
      *
-     * @return string 
+     * @return string
      */
     public function getTelephone()
     {
@@ -332,6 +209,7 @@ class Membre
      * Set avatar
      *
      * @param string $avatar
+     *
      * @return Membre
      */
     public function setAvatar($avatar)
@@ -344,7 +222,7 @@ class Membre
     /**
      * Get avatar
      *
-     * @return string 
+     * @return string
      */
     public function getAvatar()
     {
@@ -355,6 +233,7 @@ class Membre
      * Set niveaumin
      *
      * @param string $niveaumin
+     *
      * @return Membre
      */
     public function setNiveaumin($niveaumin)
@@ -367,7 +246,7 @@ class Membre
     /**
      * Get niveaumin
      *
-     * @return string 
+     * @return string
      */
     public function getNiveaumin()
     {
@@ -378,6 +257,7 @@ class Membre
      * Set niveaumax
      *
      * @param string $niveaumax
+     *
      * @return Membre
      */
     public function setNiveaumax($niveaumax)
@@ -390,66 +270,35 @@ class Membre
     /**
      * Get niveaumax
      *
-     * @return string 
+     * @return string
      */
     public function getNiveaumax()
     {
         return $this->niveaumax;
     }
 
+
     /**
-     * Set meval
+     * Set eval
      *
-     * @param float $meval
+     * @param float $eval
+     *
      * @return Membre
      */
-    public function setMeval($meval)
+    public function setEval($eval)
     {
-        $this->meval = $meval;
+        $this->eval = $eval;
 
         return $this;
     }
 
     /**
-     * Get meval
+     * Get eval
      *
-     * @return float 
+     * @return float
      */
-    public function getMeval()
+    public function getEval()
     {
-        return $this->meval;
-    }
-
-    /**
-     * Set emailvalide
-     *
-     * @param integer $emailvalide
-     * @return Membre
-     */
-    public function setEmailvalide($emailvalide)
-    {
-        $this->emailvalide = $emailvalide;
-
-        return $this;
-    }
-
-    /**
-     * Get emailvalide
-     *
-     * @return integer 
-     */
-    public function getEmailvalide()
-    {
-        return $this->emailvalide;
-    }
-
-    /**
-     * Get idmembre
-     *
-     * @return integer 
-     */
-    public function getIdmembre()
-    {
-        return $this->idmembre;
+        return $this->eval;
     }
 }

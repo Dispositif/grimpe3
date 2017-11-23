@@ -39,7 +39,7 @@ class ApiController extends Controller
      */
     public function mapAction($lat, $lon, $date)
     {
-    	// http://localhost/grimpe2/web/app_dev.php/api/map/2017-11-25/43.3/5.3
+    	// http://localhost/grimpe3/web/app_dev.php/api/map/43.3/5.3/25-11-2017
         //$lat = 43.3; $lon = 5.3; $date = '2017-11-25';
 
         $em = $this->getDoctrine()->getManager();
