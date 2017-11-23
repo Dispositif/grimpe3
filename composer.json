@@ -28,7 +28,8 @@
         "symfony/symfony": "3.3.*",
         "twig/twig": "^1.0||^2.0",
         "jstayton/google-maps-geocoder": "*",
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "mjohnson/decoda": "6.*"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

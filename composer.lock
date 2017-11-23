@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5e7277e376324afd69ec5af876cc33b",
+    "content-hash": "485bf837116355acb426fadd45af0837",
     "packages": [
         {
             "name": "beberlei/DoctrineExtensions",
@@ -1101,6 +1101,60 @@
                 "maps"
             ],
             "time": "2015-11-10T19:17:52+00:00"
+        },
+        {
+            "name": "mjohnson/decoda",
+            "version": "6.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/milesj/decoda.git",
+                "reference": "ca5a02cabd0a01bf22e60510001642234cb6b066"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/milesj/decoda/zipball/ca5a02cabd0a01bf22e60510001642234cb6b066",
+                "reference": "ca5a02cabd0a01bf22e60510001642234cb6b066",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "ext-memcached": "Cache data using Memcache",
+                "ext-redis": "Cache data using Redis"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Decoda": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miles Johnson",
+                    "homepage": "http://milesj.me"
+                }
+            ],
+            "description": "A lightweight lexical string parser for BBCode styled markup.",
+            "homepage": "http://milesj.me/code/php/decoda",
+            "keywords": [
+                "HOOK",
+                "bbcode",
+                "decoda",
+                "filter",
+                "lexer",
+                "markup",
+                "parser"
+            ],
+            "time": "2017-08-15T05:09:38+00:00"
         },
         {
             "name": "monolog/monolog",
