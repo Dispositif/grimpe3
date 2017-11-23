@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Applications/MAMP/htdocs/grimpe3/src/AppBundle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=".css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/style.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+  <script src=".js/html5shiv.min.js"></script>
+  <script src=".js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="index.html">/Applications/MAMP/htdocs/grimpe3/src/AppBundle</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="AppBundle.php.html#7">AppBundle</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/News.php.html#13">News</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/SortieType.php.html#16">SortieType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/SiteType.php.html#16">SiteType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationType.php.html#14">RegistrationType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegionType.php.html#9">RegionType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/NewsType.php.html#15">NewsType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Suivisortie.php.html#13">Suivisortie</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#13">Sortie</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#13">Site</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Region.php.html#13">Region</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Meteo.php.html#13">Meteo</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#19">ApiController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#15">Membre</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#13">Commentaire</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#15">SortieController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#15">SiteController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegistrationController.php.html#21">RegistrationController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#16">RegionController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#16">NewsController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/MembreController.php.html#15">MembreController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DefaultController.php.html#9">DefaultController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/SiteRepository.php.html#14">SiteRepository</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/SiteController.php.html#15">SiteController</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#16">NewsController</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#16">RegionController</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#15">SortieController</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="Controller/RegistrationController.php.html#21">RegistrationController</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#19">ApiController</a></td><td class="text-right">12</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="AppBundle.php.html#9"><abbr title="AppBundle::getParent">getParent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#248"><abbr title="Site::getAdresse">getAdresse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#179"><abbr title="Site::getLatitude">getLatitude</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#190"><abbr title="Site::setDescription">setDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#202"><abbr title="Site::getDescription">getDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#213"><abbr title="Site::setVille">setVille</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#225"><abbr title="Site::getVille">getVille</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#236"><abbr title="Site::setAdresse">setAdresse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#259"><abbr title="Site::setSvalide">setSvalide</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#156"><abbr title="Site::getLongitude">getLongitude</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#271"><abbr title="Site::getSvalide">getSvalide</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#281"><abbr title="Site::getSiteid">getSiteid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#292"><abbr title="Site::setSregion">setSregion</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#304"><abbr title="Site::getSregion">getSregion</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#87"><abbr title="Sortie::setDate">setDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#99"><abbr title="Sortie::getDate">getDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#167"><abbr title="Site::setLatitude">setLatitude</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#144"><abbr title="Site::setLongitude">setLongitude</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#122"><abbr title="Sortie::getDatecreated">getDatecreated</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Region.php.html#65"><abbr title="Region::getRnom">getRnom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/News.php.html#109"><abbr title="News::setContenu">setContenu</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/News.php.html#121"><abbr title="News::getContenu">getContenu</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/News.php.html#131"><abbr title="News::getNid">getNid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/News.php.html#142"><abbr title="News::setNauteur">setNauteur</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/News.php.html#154"><abbr title="News::getNauteur">getNauteur</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Region.php.html#53"><abbr title="Region::setRnom">setRnom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Region.php.html#76"><abbr title="Region::setRlatitude">setRlatitude</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#133"><abbr title="Site::getType">getType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Region.php.html#88"><abbr title="Region::getRlatitude">getRlatitude</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Region.php.html#99"><abbr title="Region::setRlongitude">setRlongitude</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Region.php.html#111"><abbr title="Region::getRlongitude">getRlongitude</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Region.php.html#121"><abbr title="Region::getRid">getRid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#98"><abbr title="Site::setSitenom">setSitenom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#110"><abbr title="Site::getSitenom">getSitenom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Site.php.html#121"><abbr title="Site::setType">setType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#110"><abbr title="Sortie::setDatecreated">setDatecreated</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#133"><abbr title="Sortie::setAnnonce">setAnnonce</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/News.php.html#86"><abbr title="News::setTitre">setTitre</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationType.php.html#22"><abbr title="RegistrationType::getParent">getParent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/NewsType.php.html#40"><abbr title="NewsType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/NewsType.php.html#50"><abbr title="NewsType::getBlockPrefix">getBlockPrefix</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegionType.php.html#14"><abbr title="RegionType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegionType.php.html#22"><abbr title="RegionType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegionType.php.html#32"><abbr title="RegionType::getBlockPrefix">getBlockPrefix</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationType.php.html#16"><abbr title="RegistrationType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RegistrationType.php.html#27"><abbr title="RegistrationType::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Suivisortie.php.html#157"><abbr title="Suivisortie::getSsmembre">getSsmembre</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/SiteType.php.html#21"><abbr title="SiteType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/SiteType.php.html#55"><abbr title="SiteType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/SiteType.php.html#65"><abbr title="SiteType::getBlockPrefix">getBlockPrefix</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/SortieType.php.html#21"><abbr title="SortieType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/SortieType.php.html#55"><abbr title="SortieType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/SortieType.php.html#65"><abbr title="SortieType::getBlockPrefix">getBlockPrefix</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/NewsType.php.html#20"><abbr title="NewsType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Suivisortie.php.html#145"><abbr title="Suivisortie::setSsmembre">setSsmembre</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#145"><abbr title="Sortie::getAnnonce">getAnnonce</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#224"><abbr title="Sortie::getSsite">getSsite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#156"><abbr title="Sortie::setNiveaumin">setNiveaumin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#168"><abbr title="Sortie::getNiveaumin">getNiveaumin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#179"><abbr title="Sortie::setNiveaumax">setNiveaumax</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#191"><abbr title="Sortie::getNiveaumax">getNiveaumax</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#201"><abbr title="Sortie::getIdsortie">getIdsortie</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#212"><abbr title="Sortie::setSsite">setSsite</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#235"><abbr title="Sortie::setOrganisateur">setOrganisateur</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Suivisortie.php.html#134"><abbr title="Suivisortie::getSssortie">getSssortie</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Sortie.php.html#247"><abbr title="Sortie::getOrganisateur">getOrganisateur</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Suivisortie.php.html#66"><abbr title="Suivisortie::setSsdate">setSsdate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Suivisortie.php.html#78"><abbr title="Suivisortie::getSsdate">getSsdate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Suivisortie.php.html#89"><abbr title="Suivisortie::setMode">setMode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Suivisortie.php.html#101"><abbr title="Suivisortie::getMode">getMode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Suivisortie.php.html#111"><abbr title="Suivisortie::getSsid">getSsid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Suivisortie.php.html#122"><abbr title="Suivisortie::setSssortie">setSssortie</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/News.php.html#98"><abbr title="News::getTitre">getTitre</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/News.php.html#75"><abbr title="News::getDate">getDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#25"><abbr title="ApiController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#40"><abbr title="SortieController::newAction">newAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#55"><abbr title="SiteController::newAction">newAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#81"><abbr title="SiteController::showAction">showAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#112"><abbr title="SiteController::editAction">editAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#137"><abbr title="SiteController::deleteAction">deleteAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#158"><abbr title="SiteController::createDeleteForm">createDeleteForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#23"><abbr title="SortieController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#66"><abbr title="SortieController::showAction">showAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#23"><abbr title="SiteController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#82"><abbr title="SortieController::editAction">editAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#107"><abbr title="SortieController::deleteAction">deleteAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#128"><abbr title="SortieController::createDeleteForm">createDeleteForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#83"><abbr title="Commentaire::setContenu">setContenu</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#95"><abbr title="Commentaire::getContenu">getContenu</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#106"><abbr title="Commentaire::setDate">setDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#40"><abbr title="SiteController::sitemapAction">sitemapAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegistrationController.php.html#23"><abbr title="RegistrationController::registerAction">registerAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#129"><abbr title="Commentaire::setAlertedate">setAlertedate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#67"><abbr title="NewsController::showAction">showAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#40"><abbr title="ApiController::mapAction">mapAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DefaultController.php.html#14"><abbr title="DefaultController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/MembreController.php.html#23"><abbr title="MembreController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/MembreController.php.html#40"><abbr title="MembreController::showAction">showAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#24"><abbr title="NewsController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#41"><abbr title="NewsController::newAction">newAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#83"><abbr title="NewsController::editAction">editAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#129"><abbr title="RegionController::createDeleteForm">createDeleteForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#108"><abbr title="NewsController::deleteAction">deleteAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#129"><abbr title="NewsController::createDeleteForm">createDeleteForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#24"><abbr title="RegionController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#41"><abbr title="RegionController::newAction">newAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#67"><abbr title="RegionController::showAction">showAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#83"><abbr title="RegionController::editAction">editAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#108"><abbr title="RegionController::deleteAction">deleteAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#118"><abbr title="Commentaire::getDate">getDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#141"><abbr title="Commentaire::getAlertedate">getAlertedate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/News.php.html#63"><abbr title="News::setDate">setDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Meteo.php.html#72"><abbr title="Meteo::getDatetime">getDatetime</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#262"><abbr title="Membre::getNiveaumin">getNiveaumin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#274"><abbr title="Membre::setNiveaumax">setNiveaumax</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#286"><abbr title="Membre::getNiveaumax">getNiveaumax</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#299"><abbr title="Membre::setEval">setEval</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#311"><abbr title="Membre::getEval">getEval</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Meteo.php.html#60"><abbr title="Meteo::setDatetime">setDatetime</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Meteo.php.html#83"><abbr title="Meteo::setLieu">setLieu</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#238"><abbr title="Membre::getAvatar">getAvatar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Meteo.php.html#95"><abbr title="Meteo::getLieu">getLieu</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Meteo.php.html#106"><abbr title="Meteo::setData">setData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Meteo.php.html#118"><abbr title="Meteo::getData">getData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Meteo.php.html#129"><abbr title="Meteo::setSource">setSource</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Meteo.php.html#141"><abbr title="Meteo::getSource">getSource</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Meteo.php.html#151"><abbr title="Meteo::getMid">getMid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#250"><abbr title="Membre::setNiveaumin">setNiveaumin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#226"><abbr title="Membre::setAvatar">setAvatar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#151"><abbr title="Commentaire::getCid">getCid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#106"><abbr title="Membre::setNom">setNom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#162"><abbr title="Commentaire::setCauteur">setCauteur</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#174"><abbr title="Commentaire::getCauteur">getCauteur</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#185"><abbr title="Commentaire::setCsortie">setCsortie</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#197"><abbr title="Commentaire::getCsortie">getCsortie</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#208"><abbr title="Commentaire::setAlerteuser">setAlerteuser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Commentaire.php.html#220"><abbr title="Commentaire::getAlerteuser">getAlerteuser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#118"><abbr title="Membre::getNom">getNom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#214"><abbr title="Membre::getTelephone">getTelephone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#130"><abbr title="Membre::setPrenom">setPrenom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#142"><abbr title="Membre::getPrenom">getPrenom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#154"><abbr title="Membre::setDatecreated">setDatecreated</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#166"><abbr title="Membre::getDatecreated">getDatecreated</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#178"><abbr title="Membre::setLastip">setLastip</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#190"><abbr title="Membre::getLastip">getLastip</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Membre.php.html#202"><abbr title="Membre::setTelephone">setTelephone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/SiteRepository.php.html#16"><abbr title="SiteRepository::findNearSites">findNearSites</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/RegistrationController.php.html#23"><abbr title="RegistrationController::registerAction">registerAction</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#41"><abbr title="NewsController::newAction">newAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#83"><abbr title="NewsController::editAction">editAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/NewsController.php.html#108"><abbr title="NewsController::deleteAction">deleteAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#41"><abbr title="RegionController::newAction">newAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#83"><abbr title="RegionController::editAction">editAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/RegionController.php.html#108"><abbr title="RegionController::deleteAction">deleteAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#55"><abbr title="SiteController::newAction">newAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#112"><abbr title="SiteController::editAction">editAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/SiteController.php.html#137"><abbr title="SiteController::deleteAction">deleteAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#40"><abbr title="SortieController::newAction">newAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#82"><abbr title="SortieController::editAction">editAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/SortieController.php.html#107"><abbr title="SortieController::deleteAction">deleteAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#40"><abbr title="ApiController::mapAction">mapAction</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 5.2.3</a> using <a href="https://secure.php.net/" target="_top">PHPDBG 7.0.13</a> and <a href="https://phpunit.de/">PHPUnit 6.4.4</a> at Thu Nov 23 22:11:47 CET 2017.</small>
+    </p>
+   </footer>
+  </div>
+  <script src=".js/jquery.min.js" type="text/javascript"></script>
+  <script src=".js/bootstrap.min.js" type="text/javascript"></script>
+  <script src=".js/holder.min.js" type="text/javascript"></script>
+  <script src=".js/d3.min.js" type="text/javascript"></script>
+  <script src=".js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([23,0,0,0,0,0,0,0,0,0,0,9], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([147,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"AppBundle.php.html#7\">AppBundle<\/a>"],[0,3,"<a href=\"Controller\/ApiController.php.html#19\">ApiController<\/a>"],[0,1,"<a href=\"Controller\/DefaultController.php.html#9\">DefaultController<\/a>"],[0,2,"<a href=\"Controller\/MembreController.php.html#15\">MembreController<\/a>"],[0,12,"<a href=\"Controller\/NewsController.php.html#16\">NewsController<\/a>"],[0,12,"<a href=\"Controller\/RegionController.php.html#16\">RegionController<\/a>"],[0,6,"<a href=\"Controller\/RegistrationController.php.html#21\">RegistrationController<\/a>"],[0,13,"<a href=\"Controller\/SiteController.php.html#15\">SiteController<\/a>"],[0,12,"<a href=\"Controller\/SortieController.php.html#15\">SortieController<\/a>"],[0,13,"<a href=\"Entity\/Commentaire.php.html#13\">Commentaire<\/a>"],[0,18,"<a href=\"Entity\/Membre.php.html#15\">Membre<\/a>"],[0,9,"<a href=\"Entity\/Meteo.php.html#13\">Meteo<\/a>"],[0,9,"<a href=\"Entity\/News.php.html#13\">News<\/a>"],[0,7,"<a href=\"Entity\/Region.php.html#13\">Region<\/a>"],[0,19,"<a href=\"Entity\/Site.php.html#13\">Site<\/a>"],[0,15,"<a href=\"Entity\/Sortie.php.html#13\">Sortie<\/a>"],[0,9,"<a href=\"Entity\/Suivisortie.php.html#13\">Suivisortie<\/a>"],[0,3,"<a href=\"Form\/NewsType.php.html#15\">NewsType<\/a>"],[0,3,"<a href=\"Form\/RegionType.php.html#9\">RegionType<\/a>"],[0,3,"<a href=\"Form\/RegistrationType.php.html#14\">RegistrationType<\/a>"],[0,3,"<a href=\"Form\/SiteType.php.html#16\">SiteType<\/a>"],[0,3,"<a href=\"Form\/SortieType.php.html#16\">SortieType<\/a>"],[100,0,"<a href=\"Repository\/MembreRepository.php.html#11\">MembreRepository<\/a>"],[100,0,"<a href=\"Repository\/NewsRepository.php.html#11\">NewsRepository<\/a>"],[0,1,"<a href=\"Repository\/SiteRepository.php.html#14\">SiteRepository<\/a>"],[100,0,"<a href=\"Repository\/SortieRepository.php.html#13\">SortieRepository<\/a>"],[100,0,"<a href=\"Repository\/SuivisortieRepository.php.html#11\">SuivisortieRepository<\/a>"],[100,0,"<a href=\"Tests\/Controller\/MembreControllerTest.php.html#7\">MembreControllerTest<\/a>"],[100,0,"<a href=\"Tests\/Controller\/NewsControllerTest.php.html#7\">NewsControllerTest<\/a>"],[100,0,"<a href=\"Tests\/Controller\/RegionControllerTest.php.html#7\">RegionControllerTest<\/a>"],[100,0,"<a href=\"Tests\/Controller\/SiteControllerTest.php.html#7\">SiteControllerTest<\/a>"],[100,0,"<a href=\"Tests\/Controller\/SortieControllerTest.php.html#7\">SortieControllerTest<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"AppBundle.php.html#9\">AppBundle::getParent<\/a>"],[0,1,"<a href=\"Controller\/ApiController.php.html#25\">ApiController::indexAction<\/a>"],[0,2,"<a href=\"Controller\/ApiController.php.html#40\">ApiController::mapAction<\/a>"],[0,1,"<a href=\"Controller\/DefaultController.php.html#14\">DefaultController::indexAction<\/a>"],[0,1,"<a href=\"Controller\/MembreController.php.html#23\">MembreController::indexAction<\/a>"],[0,1,"<a href=\"Controller\/MembreController.php.html#40\">MembreController::showAction<\/a>"],[0,1,"<a href=\"Controller\/NewsController.php.html#24\">NewsController::indexAction<\/a>"],[0,3,"<a href=\"Controller\/NewsController.php.html#41\">NewsController::newAction<\/a>"],[0,1,"<a href=\"Controller\/NewsController.php.html#67\">NewsController::showAction<\/a>"],[0,3,"<a href=\"Controller\/NewsController.php.html#83\">NewsController::editAction<\/a>"],[0,3,"<a href=\"Controller\/NewsController.php.html#108\">NewsController::deleteAction<\/a>"],[0,1,"<a href=\"Controller\/NewsController.php.html#129\">NewsController::createDeleteForm<\/a>"],[0,1,"<a href=\"Controller\/RegionController.php.html#24\">RegionController::indexAction<\/a>"],[0,3,"<a href=\"Controller\/RegionController.php.html#41\">RegionController::newAction<\/a>"],[0,1,"<a href=\"Controller\/RegionController.php.html#67\">RegionController::showAction<\/a>"],[0,3,"<a href=\"Controller\/RegionController.php.html#83\">RegionController::editAction<\/a>"],[0,3,"<a href=\"Controller\/RegionController.php.html#108\">RegionController::deleteAction<\/a>"],[0,1,"<a href=\"Controller\/RegionController.php.html#129\">RegionController::createDeleteForm<\/a>"],[0,6,"<a href=\"Controller\/RegistrationController.php.html#23\">RegistrationController::registerAction<\/a>"],[0,1,"<a href=\"Controller\/SiteController.php.html#23\">SiteController::indexAction<\/a>"],[0,1,"<a href=\"Controller\/SiteController.php.html#40\">SiteController::sitemapAction<\/a>"],[0,3,"<a href=\"Controller\/SiteController.php.html#55\">SiteController::newAction<\/a>"],[0,1,"<a href=\"Controller\/SiteController.php.html#81\">SiteController::showAction<\/a>"],[0,3,"<a href=\"Controller\/SiteController.php.html#112\">SiteController::editAction<\/a>"],[0,3,"<a href=\"Controller\/SiteController.php.html#137\">SiteController::deleteAction<\/a>"],[0,1,"<a href=\"Controller\/SiteController.php.html#158\">SiteController::createDeleteForm<\/a>"],[0,1,"<a href=\"Controller\/SortieController.php.html#23\">SortieController::indexAction<\/a>"],[0,3,"<a href=\"Controller\/SortieController.php.html#40\">SortieController::newAction<\/a>"],[0,1,"<a href=\"Controller\/SortieController.php.html#66\">SortieController::showAction<\/a>"],[0,3,"<a href=\"Controller\/SortieController.php.html#82\">SortieController::editAction<\/a>"],[0,3,"<a href=\"Controller\/SortieController.php.html#107\">SortieController::deleteAction<\/a>"],[0,1,"<a href=\"Controller\/SortieController.php.html#128\">SortieController::createDeleteForm<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#83\">Commentaire::setContenu<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#95\">Commentaire::getContenu<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#106\">Commentaire::setDate<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#118\">Commentaire::getDate<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#129\">Commentaire::setAlertedate<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#141\">Commentaire::getAlertedate<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#151\">Commentaire::getCid<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#162\">Commentaire::setCauteur<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#174\">Commentaire::getCauteur<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#185\">Commentaire::setCsortie<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#197\">Commentaire::getCsortie<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#208\">Commentaire::setAlerteuser<\/a>"],[0,1,"<a href=\"Entity\/Commentaire.php.html#220\">Commentaire::getAlerteuser<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#106\">Membre::setNom<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#118\">Membre::getNom<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#130\">Membre::setPrenom<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#142\">Membre::getPrenom<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#154\">Membre::setDatecreated<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#166\">Membre::getDatecreated<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#178\">Membre::setLastip<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#190\">Membre::getLastip<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#202\">Membre::setTelephone<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#214\">Membre::getTelephone<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#226\">Membre::setAvatar<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#238\">Membre::getAvatar<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#250\">Membre::setNiveaumin<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#262\">Membre::getNiveaumin<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#274\">Membre::setNiveaumax<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#286\">Membre::getNiveaumax<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#299\">Membre::setEval<\/a>"],[0,1,"<a href=\"Entity\/Membre.php.html#311\">Membre::getEval<\/a>"],[0,1,"<a href=\"Entity\/Meteo.php.html#60\">Meteo::setDatetime<\/a>"],[0,1,"<a href=\"Entity\/Meteo.php.html#72\">Meteo::getDatetime<\/a>"],[0,1,"<a href=\"Entity\/Meteo.php.html#83\">Meteo::setLieu<\/a>"],[0,1,"<a href=\"Entity\/Meteo.php.html#95\">Meteo::getLieu<\/a>"],[0,1,"<a href=\"Entity\/Meteo.php.html#106\">Meteo::setData<\/a>"],[0,1,"<a href=\"Entity\/Meteo.php.html#118\">Meteo::getData<\/a>"],[0,1,"<a href=\"Entity\/Meteo.php.html#129\">Meteo::setSource<\/a>"],[0,1,"<a href=\"Entity\/Meteo.php.html#141\">Meteo::getSource<\/a>"],[0,1,"<a href=\"Entity\/Meteo.php.html#151\">Meteo::getMid<\/a>"],[0,1,"<a href=\"Entity\/News.php.html#63\">News::setDate<\/a>"],[0,1,"<a href=\"Entity\/News.php.html#75\">News::getDate<\/a>"],[0,1,"<a href=\"Entity\/News.php.html#86\">News::setTitre<\/a>"],[0,1,"<a href=\"Entity\/News.php.html#98\">News::getTitre<\/a>"],[0,1,"<a href=\"Entity\/News.php.html#109\">News::setContenu<\/a>"],[0,1,"<a href=\"Entity\/News.php.html#121\">News::getContenu<\/a>"],[0,1,"<a href=\"Entity\/News.php.html#131\">News::getNid<\/a>"],[0,1,"<a href=\"Entity\/News.php.html#142\">News::setNauteur<\/a>"],[0,1,"<a href=\"Entity\/News.php.html#154\">News::getNauteur<\/a>"],[0,1,"<a href=\"Entity\/Region.php.html#53\">Region::setRnom<\/a>"],[0,1,"<a href=\"Entity\/Region.php.html#65\">Region::getRnom<\/a>"],[0,1,"<a href=\"Entity\/Region.php.html#76\">Region::setRlatitude<\/a>"],[0,1,"<a href=\"Entity\/Region.php.html#88\">Region::getRlatitude<\/a>"],[0,1,"<a href=\"Entity\/Region.php.html#99\">Region::setRlongitude<\/a>"],[0,1,"<a href=\"Entity\/Region.php.html#111\">Region::getRlongitude<\/a>"],[0,1,"<a href=\"Entity\/Region.php.html#121\">Region::getRid<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#98\">Site::setSitenom<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#110\">Site::getSitenom<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#121\">Site::setType<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#133\">Site::getType<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#144\">Site::setLongitude<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#156\">Site::getLongitude<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#167\">Site::setLatitude<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#179\">Site::getLatitude<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#190\">Site::setDescription<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#202\">Site::getDescription<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#213\">Site::setVille<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#225\">Site::getVille<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#236\">Site::setAdresse<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#248\">Site::getAdresse<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#259\">Site::setSvalide<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#271\">Site::getSvalide<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#281\">Site::getSiteid<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#292\">Site::setSregion<\/a>"],[0,1,"<a href=\"Entity\/Site.php.html#304\">Site::getSregion<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#87\">Sortie::setDate<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#99\">Sortie::getDate<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#110\">Sortie::setDatecreated<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#122\">Sortie::getDatecreated<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#133\">Sortie::setAnnonce<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#145\">Sortie::getAnnonce<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#156\">Sortie::setNiveaumin<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#168\">Sortie::getNiveaumin<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#179\">Sortie::setNiveaumax<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#191\">Sortie::getNiveaumax<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#201\">Sortie::getIdsortie<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#212\">Sortie::setSsite<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#224\">Sortie::getSsite<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#235\">Sortie::setOrganisateur<\/a>"],[0,1,"<a href=\"Entity\/Sortie.php.html#247\">Sortie::getOrganisateur<\/a>"],[0,1,"<a href=\"Entity\/Suivisortie.php.html#66\">Suivisortie::setSsdate<\/a>"],[0,1,"<a href=\"Entity\/Suivisortie.php.html#78\">Suivisortie::getSsdate<\/a>"],[0,1,"<a href=\"Entity\/Suivisortie.php.html#89\">Suivisortie::setMode<\/a>"],[0,1,"<a href=\"Entity\/Suivisortie.php.html#101\">Suivisortie::getMode<\/a>"],[0,1,"<a href=\"Entity\/Suivisortie.php.html#111\">Suivisortie::getSsid<\/a>"],[0,1,"<a href=\"Entity\/Suivisortie.php.html#122\">Suivisortie::setSssortie<\/a>"],[0,1,"<a href=\"Entity\/Suivisortie.php.html#134\">Suivisortie::getSssortie<\/a>"],[0,1,"<a href=\"Entity\/Suivisortie.php.html#145\">Suivisortie::setSsmembre<\/a>"],[0,1,"<a href=\"Entity\/Suivisortie.php.html#157\">Suivisortie::getSsmembre<\/a>"],[0,1,"<a href=\"Form\/NewsType.php.html#20\">NewsType::buildForm<\/a>"],[0,1,"<a href=\"Form\/NewsType.php.html#40\">NewsType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/NewsType.php.html#50\">NewsType::getBlockPrefix<\/a>"],[0,1,"<a href=\"Form\/RegionType.php.html#14\">RegionType::buildForm<\/a>"],[0,1,"<a href=\"Form\/RegionType.php.html#22\">RegionType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/RegionType.php.html#32\">RegionType::getBlockPrefix<\/a>"],[0,1,"<a href=\"Form\/RegistrationType.php.html#16\">RegistrationType::buildForm<\/a>"],[0,1,"<a href=\"Form\/RegistrationType.php.html#22\">RegistrationType::getParent<\/a>"],[0,1,"<a href=\"Form\/RegistrationType.php.html#27\">RegistrationType::getName<\/a>"],[0,1,"<a href=\"Form\/SiteType.php.html#21\">SiteType::buildForm<\/a>"],[0,1,"<a href=\"Form\/SiteType.php.html#55\">SiteType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/SiteType.php.html#65\">SiteType::getBlockPrefix<\/a>"],[0,1,"<a href=\"Form\/SortieType.php.html#21\">SortieType::buildForm<\/a>"],[0,1,"<a href=\"Form\/SortieType.php.html#55\">SortieType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/SortieType.php.html#65\">SortieType::getBlockPrefix<\/a>"],[0,1,"<a href=\"Repository\/SiteRepository.php.html#16\">SiteRepository::findNearSites<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

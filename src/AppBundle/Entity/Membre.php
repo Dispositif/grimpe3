@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\MembreRepository")
  * @ORM\Table(name="fos_user")
  */
 class Membre extends BaseUser
@@ -43,14 +43,6 @@ class Membre extends BaseUser
      *
      * @ORM\Column(name="prenom", type="string", length=30, nullable=true)
      *
-     * @Assert\NotBlank(message="Entrez un prénom.", groups={"Registration", "Profile"})
-     * @Assert\Length(
-     *     min=3,
-     *     max=50,
-     *     minMessage="Prénom trop court.",
-     *     maxMessage="Prénom trop long.",
-     *     groups={"Registration", "Profile"}
-     * )
      */
     protected $prenom;
 

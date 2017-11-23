@@ -82,6 +82,21 @@ class SiteController extends Controller
     {
         $deleteForm = $this->createDeleteForm($site);
 
+        // TODO BBcode 
+        // HACKED (à l'arrache)
+        
+        $description = $site->getDescription();
+        $replace = [
+                '\r\n'  => '<br />',
+                '[h3]'   => '<h3>',
+                '[/h3]'  => '</h3>',
+                '[img]'  => '<div style="text-align:center"><img class="img-thumbnail" width="250" style="margin:20px;" src="',
+                '[/img]' => '" /></div>',
+                ];
+        $description = str_replace(array_keys($replace), array_values($replace), $description);
+        $site->setDescription( $description);
+        //*/
+
         return $this->render('site/show.html.twig', array(
             'site' => $site,
             'delete_form' => $deleteForm->createView(),

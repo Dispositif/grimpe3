@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * News
  *
  * @ORM\Table(name="news", indexes={@ORM\Index(name="News_fk0", columns={"nauteur"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\NewsRepository")
  */
 class News
 {

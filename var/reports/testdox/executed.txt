@@ -1,0 +1,3 @@
+s\AppBundle\Controller\DefaultController
+ [x] Index
+

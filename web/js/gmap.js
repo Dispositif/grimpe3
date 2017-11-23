@@ -29,7 +29,7 @@
 
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 45, lng: 5},
-          zoom: 11,
+          zoom: 10,
           mapTypeId: 'roadmap',
           // roadmap, terrain, satellite, hybrid
           mapTypeControl: false,
