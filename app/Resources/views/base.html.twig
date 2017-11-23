@@ -26,6 +26,17 @@
       <li><a href="{{ path('news_index')}}">News</a></li>
       <li><a href="{{ path('site_map')}}">Map</a></li>
 
+
+      {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+          <li><a href="">{{ app.user.username }}</a></li>
+          <li><a href="{{ path('fos_user_security_logout') }}">déco</a> </li>
+      {% else %}
+           <li><a href="{{ path('fos_user_security_login') }}">Connexion</a></li>
+           <li><a href="{{ path('fos_user_registration_register') }}">Inscription</a></li>
+      {% endif %}
+        {# % render 'FOSUserBundle:Security:login' % #}
+
+ 
     </ul>
   </div>
 </nav>

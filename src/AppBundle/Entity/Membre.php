@@ -6,6 +6,7 @@ namespace AppBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -25,6 +26,15 @@ class Membre extends BaseUser
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=30, nullable=true)
+     * 
+     * //Assert\NotBlank(message="Entrez un nom.", groups={"Registration", "Profile"})
+     * //Assert\Length(
+     *     min=3,
+     *     max=255,
+     *     minMessage="The name is too short.",
+     *     maxMessage="The name is too long.",
+     *     groups={"Registration", "Profile"}
+     * )
      */
     protected $nom;
 
@@ -32,6 +42,15 @@ class Membre extends BaseUser
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=30, nullable=true)
+     *
+     * @Assert\NotBlank(message="Entrez un prénom.", groups={"Registration", "Profile"})
+     * @Assert\Length(
+     *     min=3,
+     *     max=50,
+     *     minMessage="Prénom trop court.",
+     *     maxMessage="Prénom trop long.",
+     *     groups={"Registration", "Profile"}
+     * )
      */
     protected $prenom;
 

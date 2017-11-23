@@ -58,8 +58,8 @@ class RegistrationController extends BaseController
                 $user->addRole( 'ROLE_USER' ); // ok. = default = a:0:{} 
                 //$user->setIsadmin( 0 );
 
-                var_dump($user); //DEBUG
-                exit;
+                //var_dump($user); //DEBUG
+                //exit;
 
                 $userManager->updateUser($user);
 
