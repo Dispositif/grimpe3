@@ -16,7 +16,7 @@
         <tbody>
         {% for news in news %}
             <tr>
-                <td><a href="{{ path('news_show', { 'nid': news.nid }) }}">{{ news.date }}</a></td>
+                <td><a href="{{ path('news_show', { 'nid': news.nid }) }}">{#{ news.date }#}</a></td>
                 <td>{{ news.titre }}</td>
                 <td>{{ news.contenu }}</td>
                 <td>{{ news.nid }}</td>

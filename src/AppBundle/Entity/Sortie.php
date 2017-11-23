@@ -82,7 +82,6 @@ class Sortie
      * Set date
      *
      * @param \DateTime $date
-     *
      * @return Sortie
      */
     public function setDate($date)
@@ -95,7 +94,7 @@ class Sortie
     /**
      * Get date
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getDate()
     {
@@ -106,7 +105,6 @@ class Sortie
      * Set datecreated
      *
      * @param \DateTime $datecreated
-     *
      * @return Sortie
      */
     public function setDatecreated($datecreated)
@@ -119,7 +117,7 @@ class Sortie
     /**
      * Get datecreated
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getDatecreated()
     {
@@ -130,7 +128,6 @@ class Sortie
      * Set annonce
      *
      * @param string $annonce
-     *
      * @return Sortie
      */
     public function setAnnonce($annonce)
@@ -143,7 +140,7 @@ class Sortie
     /**
      * Get annonce
      *
-     * @return string
+     * @return string 
      */
     public function getAnnonce()
     {
@@ -154,7 +151,6 @@ class Sortie
      * Set niveaumin
      *
      * @param string $niveaumin
-     *
      * @return Sortie
      */
     public function setNiveaumin($niveaumin)
@@ -167,7 +163,7 @@ class Sortie
     /**
      * Get niveaumin
      *
-     * @return string
+     * @return string 
      */
     public function getNiveaumin()
     {
@@ -178,7 +174,6 @@ class Sortie
      * Set niveaumax
      *
      * @param string $niveaumax
-     *
      * @return Sortie
      */
     public function setNiveaumax($niveaumax)
@@ -191,7 +186,7 @@ class Sortie
     /**
      * Get niveaumax
      *
-     * @return string
+     * @return string 
      */
     public function getNiveaumax()
     {
@@ -201,7 +196,7 @@ class Sortie
     /**
      * Get idsortie
      *
-     * @return integer
+     * @return integer 
      */
     public function getIdsortie()
     {
@@ -212,7 +207,6 @@ class Sortie
      * Set ssite
      *
      * @param \AppBundle\Entity\Site $ssite
-     *
      * @return Sortie
      */
     public function setSsite(\AppBundle\Entity\Site $ssite = null)
@@ -225,7 +219,7 @@ class Sortie
     /**
      * Get ssite
      *
-     * @return \AppBundle\Entity\Site
+     * @return \AppBundle\Entity\Site 
      */
     public function getSsite()
     {
@@ -236,7 +230,6 @@ class Sortie
      * Set organisateur
      *
      * @param \AppBundle\Entity\Membre $organisateur
-     *
      * @return Sortie
      */
     public function setOrganisateur(\AppBundle\Entity\Membre $organisateur = null)
@@ -249,7 +242,7 @@ class Sortie
     /**
      * Get organisateur
      *
-     * @return \AppBundle\Entity\Membre
+     * @return \AppBundle\Entity\Membre 
      */
     public function getOrganisateur()
     {

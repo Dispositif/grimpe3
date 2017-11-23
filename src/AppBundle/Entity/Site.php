@@ -93,7 +93,6 @@ class Site
      * Set sitenom
      *
      * @param string $sitenom
-     *
      * @return Site
      */
     public function setSitenom($sitenom)
@@ -106,7 +105,7 @@ class Site
     /**
      * Get sitenom
      *
-     * @return string
+     * @return string 
      */
     public function getSitenom()
     {
@@ -117,7 +116,6 @@ class Site
      * Set type
      *
      * @param string $type
-     *
      * @return Site
      */
     public function setType($type)
@@ -130,7 +128,7 @@ class Site
     /**
      * Get type
      *
-     * @return string
+     * @return string 
      */
     public function getType()
     {
@@ -141,7 +139,6 @@ class Site
      * Set longitude
      *
      * @param float $longitude
-     *
      * @return Site
      */
     public function setLongitude($longitude)
@@ -154,7 +151,7 @@ class Site
     /**
      * Get longitude
      *
-     * @return float
+     * @return float 
      */
     public function getLongitude()
     {
@@ -165,7 +162,6 @@ class Site
      * Set latitude
      *
      * @param float $latitude
-     *
      * @return Site
      */
     public function setLatitude($latitude)
@@ -178,7 +174,7 @@ class Site
     /**
      * Get latitude
      *
-     * @return float
+     * @return float 
      */
     public function getLatitude()
     {
@@ -189,7 +185,6 @@ class Site
      * Set description
      *
      * @param string $description
-     *
      * @return Site
      */
     public function setDescription($description)
@@ -202,7 +197,7 @@ class Site
     /**
      * Get description
      *
-     * @return string
+     * @return string 
      */
     public function getDescription()
     {
@@ -213,7 +208,6 @@ class Site
      * Set ville
      *
      * @param string $ville
-     *
      * @return Site
      */
     public function setVille($ville)
@@ -226,7 +220,7 @@ class Site
     /**
      * Get ville
      *
-     * @return string
+     * @return string 
      */
     public function getVille()
     {
@@ -237,7 +231,6 @@ class Site
      * Set adresse
      *
      * @param string $adresse
-     *
      * @return Site
      */
     public function setAdresse($adresse)
@@ -250,7 +243,7 @@ class Site
     /**
      * Get adresse
      *
-     * @return string
+     * @return string 
      */
     public function getAdresse()
     {
@@ -261,7 +254,6 @@ class Site
      * Set svalide
      *
      * @param boolean $svalide
-     *
      * @return Site
      */
     public function setSvalide($svalide)
@@ -274,7 +266,7 @@ class Site
     /**
      * Get svalide
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getSvalide()
     {
@@ -284,7 +276,7 @@ class Site
     /**
      * Get siteid
      *
-     * @return integer
+     * @return integer 
      */
     public function getSiteid()
     {
@@ -295,7 +287,6 @@ class Site
      * Set sregion
      *
      * @param \AppBundle\Entity\Region $sregion
-     *
      * @return Site
      */
     public function setSregion(\AppBundle\Entity\Region $sregion = null)
@@ -308,7 +299,7 @@ class Site
     /**
      * Get sregion
      *
-     * @return \AppBundle\Entity\Region
+     * @return \AppBundle\Entity\Region 
      */
     public function getSregion()
     {

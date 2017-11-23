@@ -1,0 +1,5 @@
+#utilisation des annotations voir config/routing.yml
+
+#grimpe_homepage:
+#    path:     /
+#    defaults: { _controller: AppBundle:Default:index }

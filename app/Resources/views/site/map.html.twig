@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+
+<link rel="stylesheet" href="{{ asset('css/datepicker.css') }}" />';
+    <style>
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+width: 100%;
+height:400px;
+margin: auto;
+border: 1px solid green;
+}
+// iPhone 2G-4S in portrait & landscape
+// marche pas.
+@media only screen and (max-device-width:480px) { 
+    #map {
+    width: 100px;
+    height:420px;
+    margin:0px;
+    border: 1px solid green;
+    }
+}
+    </style>
+{% endblock %}
+{% block body %}
+    <h4>Sites à proximité</h4>
+
+        <div id="map" style="text-align:center;background-color:white;opacity: 1;"></div>
+      
+      <br><div style="margin:auto;font-size:.8em"><img src="{{ asset('images/icons/number_0.png')}}" /> aucune sortie <img src="{{ asset('images/icons/number_3.png') }}" /> 3 sorties ce jour</div>
+
+      <br>Afficher les sorties 
+          <input type="text" id="sortiedate" data-toggle="datepicker" placeholder="choisir une date" class="form-control mr-sm-2" value="{{ "now"|date("d-m-Y") }}" />
+        <button id="boutondate">chercher</button>
+
+
+
+{% endblock %}
+{% block javascripts %}
+<script src="{{ asset('js/datepicker.js') }}"></script>
+<script>
+
+  // datepicker
+
+  //$('[data-toggle=\"datepicker\"]').datepicker();
+
+  $('[data-toggle="datepicker"]').datepicker({
+    format: 'dd-mm-YYYY',
+    weekStart: '1', autoHide : '1', startDate: '01/10/2017',endDate: '30/04/2018',
+      daysMin: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
+      monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'] });
+
+      // language: 'fr-FR'
+
+
+</script>
+
+<script src="{{ asset('js/gmap.js') }}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJv0lCaBnpda4TPMY0PCFUp_LGeSjAjbA&callback=initMap"></script>
+{% endblock %}

@@ -32,6 +32,21 @@ class SiteController extends Controller
     }
 
     /**
+     * Show a map of sites
+     *
+     * @Route("/map", name="site_map")
+     * @Method({"GET"})
+     */
+    public function sitemapAction()
+    {
+        //$em = $this->getDoctrine()->getManager();
+        //$sites = $em->getRepository('AppBundle:Site')->findAll();
+
+        return $this->render('site/map.html.twig');
+    }
+
+
+    /**
      * Creates a new site entity.
      *
      * @Route("/new", name="site_new")

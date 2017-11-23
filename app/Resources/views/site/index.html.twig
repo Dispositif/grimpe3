@@ -1,35 +1,29 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Sites list</h1>
+    <h1>Liste des sites</h1>
 
     <table>
         <thead>
             <tr>
+                <th></th>
                 <th>Sitenom</th>
                 <th>Type</th>
-                <th>Longitude</th>
-                <th>Latitude</th>
-                <th>Description</th>
                 <th>Ville</th>
-                <th>Adresse</th>
+                
                 <th>Svalide</th>
-                <th>Siteid</th>
+                
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for site in sites %}
             <tr>
-                <td><a href="{{ path('site_show', { 'siteid': site.siteid }) }}">{{ site.sitenom }}</a></td>
-                <td>{{ site.type }}</td>
-                <td>{{ site.longitude }}</td>
-                <td>{{ site.latitude }}</td>
-                <td>{{ site.description }}</td>
+                <td>{% if site.svalide %}<span style="color:green" class="glyphicon glyphicon-ok"></span>{% else %}<span style="color:orange" class="glyphicon glyphicon-ban-circle"></span>{% endif %} &nbsp;&nbsp;</td>
+                <td> <a href="{{ path('site_show', { 'siteid': site.siteid }) }}">{{ site.sitenom }}</a></td>
+                <td>{{ site.type }}</td>               
                 <td>{{ site.ville }}</td>
-                <td>{{ site.adresse }}</td>
-                <td>{% if site.svalide %}Yes{% else %}No{% endif %}</td>
-                <td>{{ site.siteid }}</td>
+                
                 <td>
                     <ul>
                         <li>
@@ -40,6 +34,7 @@
                         </li>
                     </ul>
                 </td>
+                
             </tr>
         {% endfor %}
         </tbody>
@@ -47,7 +42,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('site_new') }}">Create a new site</a>
+            <a href="{{ path('site_new') }}">Créer un nouveau site</a>
         </li>
     </ul>
 {% endblock %}

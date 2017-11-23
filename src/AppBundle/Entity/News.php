@@ -58,7 +58,6 @@ class News
      * Set date
      *
      * @param \DateTime $date
-     *
      * @return News
      */
     public function setDate($date)
@@ -71,7 +70,7 @@ class News
     /**
      * Get date
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getDate()
     {
@@ -82,7 +81,6 @@ class News
      * Set titre
      *
      * @param string $titre
-     *
      * @return News
      */
     public function setTitre($titre)
@@ -95,7 +93,7 @@ class News
     /**
      * Get titre
      *
-     * @return string
+     * @return string 
      */
     public function getTitre()
     {
@@ -106,7 +104,6 @@ class News
      * Set contenu
      *
      * @param string $contenu
-     *
      * @return News
      */
     public function setContenu($contenu)
@@ -119,7 +116,7 @@ class News
     /**
      * Get contenu
      *
-     * @return string
+     * @return string 
      */
     public function getContenu()
     {
@@ -129,7 +126,7 @@ class News
     /**
      * Get nid
      *
-     * @return integer
+     * @return integer 
      */
     public function getNid()
     {
@@ -140,7 +137,6 @@ class News
      * Set nauteur
      *
      * @param \AppBundle\Entity\Membre $nauteur
-     *
      * @return News
      */
     public function setNauteur(\AppBundle\Entity\Membre $nauteur = null)
@@ -153,7 +149,7 @@ class News
     /**
      * Get nauteur
      *
-     * @return \AppBundle\Entity\Membre
+     * @return \AppBundle\Entity\Membre 
      */
     public function getNauteur()
     {

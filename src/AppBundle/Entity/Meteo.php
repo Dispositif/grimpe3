@@ -55,7 +55,6 @@ class Meteo
      * Set datetime
      *
      * @param \DateTime $datetime
-     *
      * @return Meteo
      */
     public function setDatetime($datetime)
@@ -68,7 +67,7 @@ class Meteo
     /**
      * Get datetime
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getDatetime()
     {
@@ -79,7 +78,6 @@ class Meteo
      * Set lieu
      *
      * @param integer $lieu
-     *
      * @return Meteo
      */
     public function setLieu($lieu)
@@ -92,7 +90,7 @@ class Meteo
     /**
      * Get lieu
      *
-     * @return integer
+     * @return integer 
      */
     public function getLieu()
     {
@@ -103,7 +101,6 @@ class Meteo
      * Set data
      *
      * @param string $data
-     *
      * @return Meteo
      */
     public function setData($data)
@@ -116,7 +113,7 @@ class Meteo
     /**
      * Get data
      *
-     * @return string
+     * @return string 
      */
     public function getData()
     {
@@ -127,7 +124,6 @@ class Meteo
      * Set source
      *
      * @param string $source
-     *
      * @return Meteo
      */
     public function setSource($source)
@@ -140,7 +136,7 @@ class Meteo
     /**
      * Get source
      *
-     * @return string
+     * @return string 
      */
     public function getSource()
     {
@@ -150,7 +146,7 @@ class Meteo
     /**
      * Get mid
      *
-     * @return integer
+     * @return integer 
      */
     public function getMid()
     {

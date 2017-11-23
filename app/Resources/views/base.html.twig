@@ -2,12 +2,39 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Grimpe!{% endblock %}</title>
+        
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" />
+        <script type="text/javascript" src="{{ asset('bootstrap/js/jquery-3.2.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
+        {% block stylesheets %}{% endblock %}
+        
     </head>
-    <body>
+    <body style="background-color:grey;background-image:url('{{ asset('images/climbing3.jpg') }}')">
+
+
+        <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ path('homepage') }}" style="font-weight:bolder;color:green;">Grimpe!</a>
+    </div>
+    <ul class="nav navbar-nav">
+
+      <li><a href="{{ path('site_index')}}">Sites</a></li>
+      <li><a href="{{ path('region_index')}}">Regions</a></li>
+      <li><a href="{{ path('news_index')}}">News</a></li>
+      <li><a href="{{ path('site_map')}}">Map</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+        <div class="well col-xs-11 col-md-6 col-md-offset-3">
         {% block body %}{% endblock %}
+        </div>
+
         {% block javascripts %}{% endblock %}
+
     </body>
 </html>

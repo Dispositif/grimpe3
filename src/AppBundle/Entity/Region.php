@@ -48,7 +48,6 @@ class Region
      * Set rnom
      *
      * @param string $rnom
-     *
      * @return Region
      */
     public function setRnom($rnom)
@@ -61,7 +60,7 @@ class Region
     /**
      * Get rnom
      *
-     * @return string
+     * @return string 
      */
     public function getRnom()
     {
@@ -72,7 +71,6 @@ class Region
      * Set rlatitude
      *
      * @param float $rlatitude
-     *
      * @return Region
      */
     public function setRlatitude($rlatitude)
@@ -85,7 +83,7 @@ class Region
     /**
      * Get rlatitude
      *
-     * @return float
+     * @return float 
      */
     public function getRlatitude()
     {
@@ -96,7 +94,6 @@ class Region
      * Set rlongitude
      *
      * @param float $rlongitude
-     *
      * @return Region
      */
     public function setRlongitude($rlongitude)
@@ -109,7 +106,7 @@ class Region
     /**
      * Get rlongitude
      *
-     * @return float
+     * @return float 
      */
     public function getRlongitude()
     {
@@ -119,7 +116,7 @@ class Region
     /**
      * Get rid
      *
-     * @return integer
+     * @return integer 
      */
     public function getRid()
     {

@@ -78,7 +78,6 @@ class Commentaire
      * Set contenu
      *
      * @param string $contenu
-     *
      * @return Commentaire
      */
     public function setContenu($contenu)
@@ -91,7 +90,7 @@ class Commentaire
     /**
      * Get contenu
      *
-     * @return string
+     * @return string 
      */
     public function getContenu()
     {
@@ -102,7 +101,6 @@ class Commentaire
      * Set date
      *
      * @param \DateTime $date
-     *
      * @return Commentaire
      */
     public function setDate($date)
@@ -115,7 +113,7 @@ class Commentaire
     /**
      * Get date
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getDate()
     {
@@ -126,7 +124,6 @@ class Commentaire
      * Set alertedate
      *
      * @param \DateTime $alertedate
-     *
      * @return Commentaire
      */
     public function setAlertedate($alertedate)
@@ -139,7 +136,7 @@ class Commentaire
     /**
      * Get alertedate
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getAlertedate()
     {
@@ -149,7 +146,7 @@ class Commentaire
     /**
      * Get cid
      *
-     * @return integer
+     * @return integer 
      */
     public function getCid()
     {
@@ -160,7 +157,6 @@ class Commentaire
      * Set cauteur
      *
      * @param \AppBundle\Entity\Membre $cauteur
-     *
      * @return Commentaire
      */
     public function setCauteur(\AppBundle\Entity\Membre $cauteur = null)
@@ -173,7 +169,7 @@ class Commentaire
     /**
      * Get cauteur
      *
-     * @return \AppBundle\Entity\Membre
+     * @return \AppBundle\Entity\Membre 
      */
     public function getCauteur()
     {
@@ -184,7 +180,6 @@ class Commentaire
      * Set csortie
      *
      * @param \AppBundle\Entity\Sortie $csortie
-     *
      * @return Commentaire
      */
     public function setCsortie(\AppBundle\Entity\Sortie $csortie = null)
@@ -197,7 +192,7 @@ class Commentaire
     /**
      * Get csortie
      *
-     * @return \AppBundle\Entity\Sortie
+     * @return \AppBundle\Entity\Sortie 
      */
     public function getCsortie()
     {
@@ -208,7 +203,6 @@ class Commentaire
      * Set alerteuser
      *
      * @param \AppBundle\Entity\Membre $alerteuser
-     *
      * @return Commentaire
      */
     public function setAlerteuser(\AppBundle\Entity\Membre $alerteuser = null)
@@ -221,7 +215,7 @@ class Commentaire
     /**
      * Get alerteuser
      *
-     * @return \AppBundle\Entity\Membre
+     * @return \AppBundle\Entity\Membre 
      */
     public function getAlerteuser()
     {

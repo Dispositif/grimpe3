@@ -1,6 +1,6 @@
 
-      var siteurl = 'http://localhost/grimpe2/web/app_dev.php';
-      var weburl = 'http://localhost/grimpe2/web';
+      var siteurl = 'http://localhost/grimpe3/web/app_dev.php';
+      var weburl = 'http://localhost/grimpe3/web';
 
       var pos = {lat: 43.3, lng: 5.3 };
 
@@ -69,8 +69,8 @@
         //var toc = { a: 3, b: 4};
         //var apiserver = 'http://localhost/grimpe/api/map.php?lat='+pos.lat +'&lon='+pos.lng
         
-        //console.log(sortiedate);
-        console.log(pos.lat);
+        console.log('date = ' + sortiedate);
+        console.log('lat = ' + pos.lat);
 
         // +sortiedate
         downloadUrl( siteurl +'/api/map/'+pos.lat+'/'+pos.lng+'/'+sortiedate, function(data) {

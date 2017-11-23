@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Membre
  *
- * @ORM\Table(name="membre", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_F6B4FB29E7927C74", columns={"email"})})
+ * @ORM\Table(name="membre")
  * @ORM\Entity
  */
 class Membre
@@ -15,7 +15,7 @@ class Membre
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=50, nullable=false)
+     * @ORM\Column(name="email", unique=true, type="string", length=50, nullable=false)
      */
     private $email;
 
@@ -125,7 +125,6 @@ class Membre
      * Set email
      *
      * @param string $email
-     *
      * @return Membre
      */
     public function setEmail($email)
@@ -138,7 +137,7 @@ class Membre
     /**
      * Get email
      *
-     * @return string
+     * @return string 
      */
     public function getEmail()
     {
@@ -149,7 +148,6 @@ class Membre
      * Set nom
      *
      * @param string $nom
-     *
      * @return Membre
      */
     public function setNom($nom)
@@ -162,7 +160,7 @@ class Membre
     /**
      * Get nom
      *
-     * @return string
+     * @return string 
      */
     public function getNom()
     {
@@ -173,7 +171,6 @@ class Membre
      * Set prenom
      *
      * @param string $prenom
-     *
      * @return Membre
      */
     public function setPrenom($prenom)
@@ -186,7 +183,7 @@ class Membre
     /**
      * Get prenom
      *
-     * @return string
+     * @return string 
      */
     public function getPrenom()
     {
@@ -197,7 +194,6 @@ class Membre
      * Set password
      *
      * @param string $password
-     *
      * @return Membre
      */
     public function setPassword($password)
@@ -210,7 +206,7 @@ class Membre
     /**
      * Get password
      *
-     * @return string
+     * @return string 
      */
     public function getPassword()
     {
@@ -221,7 +217,6 @@ class Membre
      * Set isadmin
      *
      * @param integer $isadmin
-     *
      * @return Membre
      */
     public function setIsadmin($isadmin)
@@ -234,7 +229,7 @@ class Membre
     /**
      * Get isadmin
      *
-     * @return integer
+     * @return integer 
      */
     public function getIsadmin()
     {
@@ -245,7 +240,6 @@ class Membre
      * Set datecreated
      *
      * @param \DateTime $datecreated
-     *
      * @return Membre
      */
     public function setDatecreated($datecreated)
@@ -258,7 +252,7 @@ class Membre
     /**
      * Get datecreated
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getDatecreated()
     {
@@ -269,7 +263,6 @@ class Membre
      * Set lastdate
      *
      * @param \DateTime $lastdate
-     *
      * @return Membre
      */
     public function setLastdate($lastdate)
@@ -282,7 +275,7 @@ class Membre
     /**
      * Get lastdate
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getLastdate()
     {
@@ -293,7 +286,6 @@ class Membre
      * Set lastip
      *
      * @param string $lastip
-     *
      * @return Membre
      */
     public function setLastip($lastip)
@@ -306,7 +298,7 @@ class Membre
     /**
      * Get lastip
      *
-     * @return string
+     * @return string 
      */
     public function getLastip()
     {
@@ -317,7 +309,6 @@ class Membre
      * Set telephone
      *
      * @param string $telephone
-     *
      * @return Membre
      */
     public function setTelephone($telephone)
@@ -330,7 +321,7 @@ class Membre
     /**
      * Get telephone
      *
-     * @return string
+     * @return string 
      */
     public function getTelephone()
     {
@@ -341,7 +332,6 @@ class Membre
      * Set avatar
      *
      * @param string $avatar
-     *
      * @return Membre
      */
     public function setAvatar($avatar)
@@ -354,7 +344,7 @@ class Membre
     /**
      * Get avatar
      *
-     * @return string
+     * @return string 
      */
     public function getAvatar()
     {
@@ -365,7 +355,6 @@ class Membre
      * Set niveaumin
      *
      * @param string $niveaumin
-     *
      * @return Membre
      */
     public function setNiveaumin($niveaumin)
@@ -378,7 +367,7 @@ class Membre
     /**
      * Get niveaumin
      *
-     * @return string
+     * @return string 
      */
     public function getNiveaumin()
     {
@@ -389,7 +378,6 @@ class Membre
      * Set niveaumax
      *
      * @param string $niveaumax
-     *
      * @return Membre
      */
     public function setNiveaumax($niveaumax)
@@ -402,7 +390,7 @@ class Membre
     /**
      * Get niveaumax
      *
-     * @return string
+     * @return string 
      */
     public function getNiveaumax()
     {
@@ -413,7 +401,6 @@ class Membre
      * Set meval
      *
      * @param float $meval
-     *
      * @return Membre
      */
     public function setMeval($meval)
@@ -426,7 +413,7 @@ class Membre
     /**
      * Get meval
      *
-     * @return float
+     * @return float 
      */
     public function getMeval()
     {
@@ -437,7 +424,6 @@ class Membre
      * Set emailvalide
      *
      * @param integer $emailvalide
-     *
      * @return Membre
      */
     public function setEmailvalide($emailvalide)
@@ -450,7 +436,7 @@ class Membre
     /**
      * Get emailvalide
      *
-     * @return integer
+     * @return integer 
      */
     public function getEmailvalide()
     {
@@ -460,7 +446,7 @@ class Membre
     /**
      * Get idmembre
      *
-     * @return integer
+     * @return integer 
      */
     public function getIdmembre()
     {
