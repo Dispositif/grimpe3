@@ -1,54 +1,60 @@
+# Project language
 language: php
-php:
-  - '5.6'
-  - '7.0'
-  - '7.1'
-  - nightly
 
-# Use fast containers instead of the slower sudo-enabled VMs:
+# Allows use container-based infrastructure
 sudo: false
 
-env:
-  global:
-  - travis=ok
+# Start mysql service
+services:
+  - mysql
+
+# Cache composer packages so "composer install" is faster
+cache:
+  directories:
+    - $HOME/.composer/cache/files
 
 branches:
     only:
         - master
         - develop
-        
-services:
-  - mysql
 
-#mysql:
-#  database: grimpe
-#  username: root
-#  encoding: utf8
-#pass = ''
+# Matrix to test in every php version
+matrix:
+  # Fast finish allows to set the build as "finished" even if the "allow_failures" matrix elements are not finished yet.
+  fast_finish: true
+  include:
+    - php: 5.5
+    - php: 5.6
+    - php: 7.0
+    - php: hhvm
+  allow_failures:
+    - php: hhvm
 
-before_install:
-  - mysql -e 'CREATE DATABASE symfony;'
+# Define an environment variable
+env:
+  - SYMFONY_VERSION="3.3.*" DB=mysql
 
-notifications:
-  email:
-    - travis-ci@kitpages.fr
+# Update composer
+before-install:
+  - composer self-update
 
-#install: php vendor/vendors.php
+# Install composer dependencies,
+# Create database, schema and fixtures
 install:
-  # add composer's global bin directory to the path
-  # see: https://github.com/drush-ops/drush#install---composer
-  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - composer install
+  - cp app/config/parameters.yml.dist app/config/parameters.yml
+  - php bin/console doctrine:database:create --env=test
+  - php bin/console doctrine:schema:create --env=test
+#  - php bin/console doctrine:fixtures:load -n --env=test
 
 before_script: 
   - composer install --dev --quiet --no-interaction
   - echo 'date.timezone = "Europe/Paris"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-  #- composer install --dev
 
-#phpunit --configuration $DB.phpunit.xml
+# Run script
+script:
+  - phpunit
 
-#script: phpunit --coverage-text
-
+# After a build, send email notification with the build results
 notifications:
   email: false
-
-

@@ -111,6 +111,6 @@ swiftmailer:
     #antiflood:
     #    threshold:            99
     #    sleep:                0
-    #delivery_addresses:   []
+    #delivery_addresses:   '%mailer_user%'
     #disable_delivery:     ~
     #logging:              '%kernel.debug%'
