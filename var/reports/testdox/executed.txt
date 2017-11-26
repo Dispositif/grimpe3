@@ -1,1 +1,10 @@
 s\AppBundle\Controller\ApiController
+ [x] Index
+ [x] Map action
+
+s\AppBundle\Controller\DefaultController
+ [x] Index
+
+s\AppBundle\Controller\MembreController
+ [ ] Index
+

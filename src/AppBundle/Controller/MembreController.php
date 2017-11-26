@@ -30,6 +30,7 @@ class MembreController extends Controller
             'membres' => $membres
         ));
     }
+    
 
     /**
      * Finds and displays a membre entity.
