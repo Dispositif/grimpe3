@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * News
+ * News.
  *
  * @ORM\Table(name="news", indexes={@ORM\Index(name="News_fk0", columns={"nauteur"})})
  * @ORM\Entity(repositoryClass="AppBundle\Repository\NewsRepository")

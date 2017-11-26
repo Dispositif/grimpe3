@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Meteo
+ * Meteo (non utilisé)
  *
  * @ORM\Table(name="meteo")
  * @ORM\Entity

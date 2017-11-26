@@ -9,6 +9,11 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
+ * Membre entity
+ *
+ * Defini les utilisateurs (et admins). 
+ * Hérite de BaseUser du FOSUserBundle
+ * 
  * @ORM\Entity(repositoryClass="AppBundle\Repository\MembreRepository")
  * @ORM\Table(name="fos_user")
  */

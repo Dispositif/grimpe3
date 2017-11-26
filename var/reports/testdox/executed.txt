@@ -1,3 +1,1 @@
-s\AppBundle\Controller\DefaultController
- [x] Index
-
+s\AppBundle\Controller\ApiController

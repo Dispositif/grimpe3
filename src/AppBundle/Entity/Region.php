@@ -7,6 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Region
  *
+ * Pour précalcule des distances vers sites
+ *
  * @ORM\Table(name="region")
  * @ORM\Entity
  */

@@ -1,4 +1,6 @@
-
+phpDocumentor
+php bin/phpDocumentor.phar -d ./src -t ./var/docs
+phpdoc run -h
 
 ALTER TABLE `ma_table` CONVERT TO CHARACTER SET 'UTF8';
 @mysql_query(« SET CHARACTER SET ‘UTF8′ »);

@@ -23,7 +23,7 @@ class SiteRepository extends EntityRepository
 		// https://github.com/beberlei/DoctrineExtensions
 	
 		$em = $this->getEntityManager();
-		$query = $em->createQuery("SELECT s.siteid,s.sitenom,s.longitude,s.latitude,s.type,
+		$query = $em->createQuery("SELECT s.siteid,s.sitenom,s.longitude,s.latitude,s.type,s.ville,s.adresse,
 						count(sor.idsortie) as nsorties,
 						round((6371 * acos(cos(radians(:lat)) * cos(radians(s.latitude)) * cos(radians(s.longitude) - radians(:lon)) + sin(radians(:lat)) * sin(radians(s.latitude)))), 1) AS distance 
 						FROM AppBundle:Site s 

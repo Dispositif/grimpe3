@@ -12,7 +12,7 @@ use FOS\UserBundle\Event\FormEvent;
 use FOS\UserBundle\Event\FilterUserResponseEvent;
 
 /**
- * Overriding FOSUserBundle Controller
+ * Overriding FOSUserBundle Controller with the Membre entity
  * 
  * http://symfony.com/doc/3.3/bundles/inheritance.html
  * https://github.com/FriendsOfSymfony/FOSUserBundle/blob/master/Resources/doc/overriding_controllers.rst
@@ -64,9 +64,6 @@ class RegistrationController extends BaseController
                 $userManager->updateUser($user);
 
                 
-
-
-
                 if (null === $response = $event->getResponse()) {
                     $url = $this->generateUrl('fos_user_registration_confirmed');
                     $response = new RedirectResponse($url);

@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Commentaire
+ * Commentaire des sorties
  *
  * @ORM\Table(name="commentaire", indexes={@ORM\Index(name="commentaire_fk0", columns={"cauteur"}), @ORM\Index(name="commentaire_fk1", columns={"csortie"}), @ORM\Index(name="commentaire_fk2", columns={"alerteuser"})})
  * @ORM\Entity

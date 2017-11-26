@@ -14,11 +14,18 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 /**
  * API controller (REST server)
  *
+ * Generate XML ou JSON for Ajax requests
+ *
+ * @package Projet Grimpe!
+ * @author Phil
+ * 
  * @Route("api")
  */
 class ApiController extends Controller
 {
     /**
+     * Pour tester, envoi du Json hello
+     * 
      * @Route("/", name="api_hello")
      * @Method("GET")
      */
@@ -32,7 +39,12 @@ class ApiController extends Controller
     }
 
     /**
-     * Renvoi XML des sites à proximité avec sorties selon date
+     * Renvoi XML des sites d'escalade à proximité
+     * 
+     * - avec sorties 
+     * - selon date
+     * - exemple : http://localhost/grimpe3/web/app_dev.php/api/map/43.3/5.3/25-11-2017
+     * 
      * // ,requirements={"id" = "\d+"}
      * @Route("/map/{lat}/{lon}/{date}", name="api_sitemap")
      * @Method("GET")
@@ -57,7 +69,7 @@ class ApiController extends Controller
 		    $newnode = $parnode->appendChild($node);
 		    $newnode->setAttribute("id", $row['siteid']);
 		    $newnode->setAttribute("type", $row['type']);
-		    $newnode->setAttribute("adresse", $row['sitenom']);
+		    $newnode->setAttribute("ville", $row['ville']);
 		    $newnode->setAttribute("nom", $row['sitenom']);
 		    $newnode->setAttribute("lat", $row['latitude']);
 		    $newnode->setAttribute("lng", $row['longitude']);

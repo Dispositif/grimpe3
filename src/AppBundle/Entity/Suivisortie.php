@@ -7,6 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Suivisortie
  *
+ * Pour gérer les participants à une sortie
+ *
  * @ORM\Table(name="suivisortie", indexes={@ORM\Index(name="suivi_sortie_fk0", columns={"sssortie"}), @ORM\Index(name="suivi_sortie_fk1", columns={"ssmembre"})})
  * @ORM\Entity(repositoryClass="AppBundle\Repository\SuivisortieRepository")
  */

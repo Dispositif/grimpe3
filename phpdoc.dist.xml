@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+  <title><![CDATA[Grimpe!]]></title>
+  <parser>
+    <target>var/output</target>
+  </parser>
+  <transformer>
+    <target>var/output</target>
+  </transformer>
+  <files>
+    <directory>src</directory>
+    <ignore>test/*</ignore>
+  </files>
+</phpdoc>

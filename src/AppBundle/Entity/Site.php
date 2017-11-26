@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Site
+ * Site d'escalade
  *
  * @ORM\Table(name="site", indexes={@ORM\Index(name="site_fk1", columns={"sregion"})})
  * @ORM\Entity(repositoryClass="AppBundle\Repository\SiteRepository")

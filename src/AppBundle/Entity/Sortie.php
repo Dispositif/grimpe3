@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Sortie
+ * Sortie programmées pour un site d'escalade
  *
  * @ORM\Table(name="sortie", indexes={@ORM\Index(name="sortie_fk0", columns={"ssite"}), @ORM\Index(name="sortie_fk1", columns={"organisateur"})})
  * @ORM\Entity(repositoryClass="AppBundle\Repository\SortieRepository")
