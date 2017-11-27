@@ -84,7 +84,6 @@ class SiteController extends Controller
 
         // TODO BBcode 
         // HACKED (à l'arrache)
-        
         $description = $site->getDescription();
         $replace = [
                 '\r\n'  => '<br />',
@@ -95,11 +94,62 @@ class SiteController extends Controller
                 ];
         $description = str_replace(array_keys($replace), array_values($replace), $description);
         $site->setDescription( $description);
-        //*/
+        
+
+        // Liste des sorties prochaines sur ce site
+        $em = $this->getDoctrine()->getManager();
+        $sqltoday = date('Y-m-d 00:00:00', strtotime('now'));
+        $query = $em->createQuery('SELECT s
+                                    FROM AppBundle:Sortie s
+                                    WHERE s.ssite = :site AND s.date > :sqltoday
+                                    ORDER BY s.date'
+                                )->setParameter('sqltoday', $sqltoday)
+                                ->setParameter('site', $site)
+                                ->setMaxResults(10);
+        $sorties = $query->getResult();
+        
+        // var_dump($sorties);exit;
+
+        function timeto($time_stamp, $time_stamp2 = 'now') {
+            $res = '';
+
+            $diff = abs(strtotime($time_stamp) - strtotime($time_stamp2));
+
+            $jours = intval($diff / 3600 / 24);
+
+            if ($jours >= 30 * 12) {
+                return intval($diff / 3600 / 24 / 365).' ans';
+            }
+            if ($jours >= 30) {
+                return intval($diff / 3600 / 24 / 30).' mois';
+            }
+            if ($jours >= 2) {
+                return $jours.' jours';
+            }
+            // < 48h
+            $heures = floor(intval($diff / 3600));
+            $minutes = floor(($diff - $heures * 3600) / 60);
+
+            if ($heures >= 2) {
+                return $heures.' heures';
+            }
+            if ($heures == 1) {
+                return 'plus d’une heure';
+            }
+
+            if ($minutes > 2) {
+                return $minutes.' minutes';
+            } else {
+                return 'à l’instant';
+            }
+        }
+
+        
 
         return $this->render('site/show.html.twig', array(
-            'site' => $site,
-            'delete_form' => $deleteForm->createView(),
+                                        'site' => $site,
+                                        'delete_form' => $deleteForm->createView(),
+                                        'sorties' => $sorties
         ));
     }
 
@@ -108,8 +158,8 @@ class SiteController extends Controller
      *
      * @Route("/{siteid}/edit", name="site_edit")
      * @Method({"GET", "POST"})
-     */
-    public function editAction(Request $request, Site $site)
+     *
+/    public function editAction(Request $request, Site $site)
     {
         $deleteForm = $this->createDeleteForm($site);
         $editForm = $this->createForm('AppBundle\Form\SiteType', $site);

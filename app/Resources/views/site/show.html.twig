@@ -32,6 +32,24 @@
                 {% if site.svalide %}Yes{% else %}No{% endif %} site validé
             
 
+    <h3>Prochaines sorties</h3>
+        
+        {% if sorties is defined %}
+            <ul class="list-group-item" style="max-width:400px;">
+            {% for sortie in sorties %}
+
+                <li class="list-group-item">{{sortie.date.date |date("m/d/Y") }} <a href="{{ path('sortie_show', {'idsortie': sortie.idsortie }) }}"><span class="glyphicon glyphicon-upload"></span> avec ...</a><span style="font-size:0.8em;"> </span>';
+                        {{sortie.annonce |truncate(80, true, '...') }}
+                </li>
+
+            {% endfor %}
+            </ul>
+        {% else %}
+            Aucune sortie programmée.
+        {% endif %}
+        
+
+{% if is_granted('ROLE_ADMIN') %}
     <ul>
         
         <li>
@@ -43,4 +61,6 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+{% endif %}
+
 {% endblock %}

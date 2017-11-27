@@ -27,9 +27,11 @@
                         <li>
                             <a href="{{ path('site_show', { 'siteid': site.siteid }) }}">voir</a>
                         </li>
+                        {% if is_granted('ROLE_ADMIN') %}
                         <li>
                             <a href="{{ path('site_edit', { 'siteid': site.siteid }) }}">modifier</a>
                         </li>
+                        {% endif %}
                     </ul>
                 </td>
                 
@@ -38,9 +40,11 @@
         </tbody>
     </table>
 
+    {% if is_granted('ROLE_USER') %}
     <ul>
         <li>
-            <a href="{{ path('site_new') }}">Créer un nouveau site</a>
+            <a href="{{ path('site_new') }}">Proposer un nouveau site</a>
         </li>
     </ul>
+    {% endif %}
 {% endblock %}

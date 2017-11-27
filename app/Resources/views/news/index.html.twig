@@ -1,32 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>News list</h1>
+    <h1>Les news</h1>
 
     <table>
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Titre</th>
-                <th>Contenu</th>
-                <th>Nid</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
         <tbody>
         {% for news in news %}
             <tr>
                 <td><a href="{{ path('news_show', { 'nid': news.nid }) }}">{#{ news.date }#}</a></td>
                 <td>{{ news.titre }}</td>
                 <td>{{ news.contenu }}</td>
-                <td>{{ news.nid }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('news_show', { 'nid': news.nid }) }}">show</a>
+                            <a href="{{ path('news_show', { 'nid': news.nid }) }}">voir</a>
                         </li>
                         <li>
-                            <a href="{{ path('news_edit', { 'nid': news.nid }) }}">edit</a>
+                            <a href="{{ path('news_edit', { 'nid': news.nid }) }}">modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -35,9 +25,11 @@
         </tbody>
     </table>
 
+    {% if is_granted('ROLE_ADMIN') %}
     <ul>
         <li>
-            <a href="{{ path('news_new') }}">Create a new news</a>
+            <a href="{{ path('news_new') }}">Créer une news</a>
         </li>
     </ul>
+    {% endif %}
 {% endblock %}

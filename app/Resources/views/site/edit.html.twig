@@ -8,9 +8,11 @@
         
     {{ form_end(edit_form) }}
 
-    <br><br>
-        {{ form_start(delete_form) }}
-                <input type="submit" value="Supprimer">
-            {{ form_end(delete_form) }}
-        
+    {% if is_granted('ROLE_ADMIN') %}
+	    <br><br>
+	        {{ form_start(delete_form) }}
+	                <input type="submit" value="Supprimer">
+	            {{ form_end(delete_form) }}
+    {% endif %}
+    
 {% endblock %}

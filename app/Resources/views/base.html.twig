@@ -22,9 +22,14 @@
     <ul class="nav navbar-nav">
 
       <li><a href="{{ path('site_index')}}">Sites</a></li>
-      <li><a href="{{ path('region_index')}}">Regions</a></li>
+      
       <li><a href="{{ path('news_index')}}">News</a></li>
       <li><a href="{{ path('site_map')}}">Map</a></li>
+
+      {% if is_granted('ROLE_ADMIN') %}
+          <li><a href="{{ path('region_index')}}">Regions</a></li>
+          <li><a href="">Admin</a></li>
+      {% endif %}
 
 
       {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}

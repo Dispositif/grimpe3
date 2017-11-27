@@ -15,14 +15,14 @@ class Sortie
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="datetime", nullable=false)
+     * @ORM\Column(name="date", type="datetime", nullable=false, options={"default": 0} )
      */
     protected $date;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="datecreated", type="datetime", options={"default": 0})
+     * @ORM\Column(name="datecreated", type="datetime", nullable=false, options={"default": 0})
      */
     protected $datecreated;
 

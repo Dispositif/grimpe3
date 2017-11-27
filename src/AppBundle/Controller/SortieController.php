@@ -41,6 +41,8 @@ class SortieController extends Controller
     {
         $sortie = new Sortie();
         $form = $this->createForm('AppBundle\Form\SortieType', $sortie);
+        $sortie->setDatecreated( new \DateTime('now')); 
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
