@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Meteo (non utilisé)
+ * Meteo (non utilisé).
  *
  * @ORM\Table(name="meteo")
  * @ORM\Entity
@@ -20,7 +20,7 @@ class Meteo
     private $datetime;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="lieu", type="integer", nullable=false)
      */
@@ -41,7 +41,7 @@ class Meteo
     private $source;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="mid", type="integer")
      * @ORM\Id
@@ -49,12 +49,11 @@ class Meteo
      */
     private $mid;
 
-
-
     /**
-     * Set datetime
+     * Set datetime.
      *
      * @param \DateTime $datetime
+     *
      * @return Meteo
      */
     public function setDatetime($datetime)
@@ -65,9 +64,9 @@ class Meteo
     }
 
     /**
-     * Get datetime
+     * Get datetime.
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDatetime()
     {
@@ -75,9 +74,10 @@ class Meteo
     }
 
     /**
-     * Set lieu
+     * Set lieu.
      *
-     * @param integer $lieu
+     * @param int $lieu
+     *
      * @return Meteo
      */
     public function setLieu($lieu)
@@ -88,9 +88,9 @@ class Meteo
     }
 
     /**
-     * Get lieu
+     * Get lieu.
      *
-     * @return integer 
+     * @return int
      */
     public function getLieu()
     {
@@ -98,9 +98,10 @@ class Meteo
     }
 
     /**
-     * Set data
+     * Set data.
      *
      * @param string $data
+     *
      * @return Meteo
      */
     public function setData($data)
@@ -111,9 +112,9 @@ class Meteo
     }
 
     /**
-     * Get data
+     * Get data.
      *
-     * @return string 
+     * @return string
      */
     public function getData()
     {
@@ -121,9 +122,10 @@ class Meteo
     }
 
     /**
-     * Set source
+     * Set source.
      *
      * @param string $source
+     *
      * @return Meteo
      */
     public function setSource($source)
@@ -134,9 +136,9 @@ class Meteo
     }
 
     /**
-     * Get source
+     * Get source.
      *
-     * @return string 
+     * @return string
      */
     public function getSource()
     {
@@ -144,9 +146,9 @@ class Meteo
     }
 
     /**
-     * Get mid
+     * Get mid.
      *
-     * @return integer 
+     * @return int
      */
     public function getMid()
     {

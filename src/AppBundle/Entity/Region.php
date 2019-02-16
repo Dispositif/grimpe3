@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Region
+ * Region.
  *
  * Pour précalcule des distances vers sites
  *
@@ -36,7 +36,7 @@ class Region
     private $rlongitude;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="rid", type="integer")
      * @ORM\Id
@@ -44,12 +44,11 @@ class Region
      */
     private $rid;
 
-
-
     /**
-     * Set rnom
+     * Set rnom.
      *
      * @param string $rnom
+     *
      * @return Region
      */
     public function setRnom($rnom)
@@ -60,9 +59,9 @@ class Region
     }
 
     /**
-     * Get rnom
+     * Get rnom.
      *
-     * @return string 
+     * @return string
      */
     public function getRnom()
     {
@@ -70,9 +69,10 @@ class Region
     }
 
     /**
-     * Set rlatitude
+     * Set rlatitude.
      *
      * @param float $rlatitude
+     *
      * @return Region
      */
     public function setRlatitude($rlatitude)
@@ -83,9 +83,9 @@ class Region
     }
 
     /**
-     * Get rlatitude
+     * Get rlatitude.
      *
-     * @return float 
+     * @return float
      */
     public function getRlatitude()
     {
@@ -93,9 +93,10 @@ class Region
     }
 
     /**
-     * Set rlongitude
+     * Set rlongitude.
      *
      * @param float $rlongitude
+     *
      * @return Region
      */
     public function setRlongitude($rlongitude)
@@ -106,9 +107,9 @@ class Region
     }
 
     /**
-     * Get rlongitude
+     * Get rlongitude.
      *
-     * @return float 
+     * @return float
      */
     public function getRlongitude()
     {
@@ -116,9 +117,9 @@ class Region
     }
 
     /**
-     * Get rid
+     * Get rid.
      *
-     * @return integer 
+     * @return int
      */
     public function getRid()
     {

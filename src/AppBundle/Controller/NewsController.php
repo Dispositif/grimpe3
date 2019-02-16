@@ -3,9 +3,9 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\News;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -27,9 +27,9 @@ class NewsController extends Controller
 
         $news = $em->getRepository('AppBundle:News')->findAll();
 
-        return $this->render('news/index.html.twig', array(
+        return $this->render('news/index.html.twig', [
             'news' => $news,
-        ));
+        ]);
     }
 
     /**
@@ -49,13 +49,13 @@ class NewsController extends Controller
             $em->persist($news);
             $em->flush();
 
-            return $this->redirectToRoute('news_show', array('nid' => $news->getNid()));
+            return $this->redirectToRoute('news_show', ['nid' => $news->getNid()]);
         }
 
-        return $this->render('news/new.html.twig', array(
+        return $this->render('news/new.html.twig', [
             'news' => $news,
             'form' => $form->createView(),
-        ));
+        ]);
     }
 
     /**
@@ -68,10 +68,10 @@ class NewsController extends Controller
     {
         $deleteForm = $this->createDeleteForm($news);
 
-        return $this->render('news/show.html.twig', array(
+        return $this->render('news/show.html.twig', [
             'news' => $news,
             'delete_form' => $deleteForm->createView(),
-        ));
+        ]);
     }
 
     /**
@@ -89,14 +89,14 @@ class NewsController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('news_edit', array('nid' => $news->getNid()));
+            return $this->redirectToRoute('news_edit', ['nid' => $news->getNid()]);
         }
 
-        return $this->render('news/edit.html.twig', array(
+        return $this->render('news/edit.html.twig', [
             'news' => $news,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
-        ));
+        ]);
     }
 
     /**
@@ -129,7 +129,7 @@ class NewsController extends Controller
     private function createDeleteForm(News $news)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('news_delete', array('nid' => $news->getNid())))
+            ->setAction($this->generateUrl('news_delete', ['nid' => $news->getNid()]))
             ->setMethod('DELETE')
             ->getForm()
         ;

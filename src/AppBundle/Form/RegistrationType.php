@@ -1,4 +1,5 @@
 <?php
+
 // src/AppBundle/Form/RegistrationType.php
 
 namespace AppBundle\Form;
@@ -7,8 +8,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 /**
- * Overriding FOSuser forms
- * 
+ * Overriding FOSuser forms.
+ *
  * https://symfony.com/doc/current/bundles/FOSUserBundle/overriding_forms.html
  */
 class RegistrationType extends AbstractType

@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Commentaire des sorties
+ * Commentaire des sorties.
  *
  * @ORM\Table(name="commentaire", indexes={@ORM\Index(name="commentaire_fk0", columns={"cauteur"}), @ORM\Index(name="commentaire_fk1", columns={"csortie"}), @ORM\Index(name="commentaire_fk2", columns={"alerteuser"})})
  * @ORM\Entity
@@ -34,7 +34,7 @@ class Commentaire
     private $alertedate;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="cid", type="integer")
      * @ORM\Id
@@ -72,12 +72,11 @@ class Commentaire
      */
     private $alerteuser;
 
-
-
     /**
-     * Set contenu
+     * Set contenu.
      *
      * @param string $contenu
+     *
      * @return Commentaire
      */
     public function setContenu($contenu)
@@ -88,9 +87,9 @@ class Commentaire
     }
 
     /**
-     * Get contenu
+     * Get contenu.
      *
-     * @return string 
+     * @return string
      */
     public function getContenu()
     {
@@ -98,9 +97,10 @@ class Commentaire
     }
 
     /**
-     * Set date
+     * Set date.
      *
      * @param \DateTime $date
+     *
      * @return Commentaire
      */
     public function setDate($date)
@@ -111,9 +111,9 @@ class Commentaire
     }
 
     /**
-     * Get date
+     * Get date.
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDate()
     {
@@ -121,9 +121,10 @@ class Commentaire
     }
 
     /**
-     * Set alertedate
+     * Set alertedate.
      *
      * @param \DateTime $alertedate
+     *
      * @return Commentaire
      */
     public function setAlertedate($alertedate)
@@ -134,9 +135,9 @@ class Commentaire
     }
 
     /**
-     * Get alertedate
+     * Get alertedate.
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getAlertedate()
     {
@@ -144,9 +145,9 @@ class Commentaire
     }
 
     /**
-     * Get cid
+     * Get cid.
      *
-     * @return integer 
+     * @return int
      */
     public function getCid()
     {
@@ -154,9 +155,10 @@ class Commentaire
     }
 
     /**
-     * Set cauteur
+     * Set cauteur.
      *
      * @param \AppBundle\Entity\Membre $cauteur
+     *
      * @return Commentaire
      */
     public function setCauteur(\AppBundle\Entity\Membre $cauteur = null)
@@ -167,9 +169,9 @@ class Commentaire
     }
 
     /**
-     * Get cauteur
+     * Get cauteur.
      *
-     * @return \AppBundle\Entity\Membre 
+     * @return \AppBundle\Entity\Membre
      */
     public function getCauteur()
     {
@@ -177,9 +179,10 @@ class Commentaire
     }
 
     /**
-     * Set csortie
+     * Set csortie.
      *
      * @param \AppBundle\Entity\Sortie $csortie
+     *
      * @return Commentaire
      */
     public function setCsortie(\AppBundle\Entity\Sortie $csortie = null)
@@ -190,9 +193,9 @@ class Commentaire
     }
 
     /**
-     * Get csortie
+     * Get csortie.
      *
-     * @return \AppBundle\Entity\Sortie 
+     * @return \AppBundle\Entity\Sortie
      */
     public function getCsortie()
     {
@@ -200,9 +203,10 @@ class Commentaire
     }
 
     /**
-     * Set alerteuser
+     * Set alerteuser.
      *
      * @param \AppBundle\Entity\Membre $alerteuser
+     *
      * @return Commentaire
      */
     public function setAlerteuser(\AppBundle\Entity\Membre $alerteuser = null)
@@ -213,9 +217,9 @@ class Commentaire
     }
 
     /**
-     * Get alerteuser
+     * Get alerteuser.
      *
-     * @return \AppBundle\Entity\Membre 
+     * @return \AppBundle\Entity\Membre
      */
     public function getAlerteuser()
     {

@@ -3,9 +3,9 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Membre;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * Membre controller.
@@ -26,11 +26,10 @@ class MembreController extends Controller
 
         $membres = $em->getRepository('AppBundle:Membre')->findAll();
 
-        return $this->render('membre/index.html.twig', array(
-            'membres' => $membres
-        ));
+        return $this->render('membre/index.html.twig', [
+            'membres' => $membres,
+        ]);
     }
-    
 
     /**
      * Finds and displays a membre entity.
@@ -40,9 +39,8 @@ class MembreController extends Controller
      */
     public function showAction(Membre $membre)
     {
-
-        return $this->render('membre/show.html.twig', array(
-            'membre' => $membre
-        ));
+        return $this->render('membre/show.html.twig', [
+            'membre' => $membre,
+        ]);
     }
 }

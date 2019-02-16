@@ -3,9 +3,10 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Sortie;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Sortie controller.
@@ -26,9 +27,9 @@ class SortieController extends Controller
 
         $sorties = $em->getRepository('AppBundle:Sortie')->findAll();
 
-        return $this->render('sortie/index.html.twig', array(
+        return $this->render('sortie/index.html.twig', [
             'sorties' => $sorties,
-        ));
+        ]);
     }
 
     /**
@@ -41,7 +42,7 @@ class SortieController extends Controller
     {
         $sortie = new Sortie();
         $form = $this->createForm('AppBundle\Form\SortieType', $sortie);
-        $sortie->setDatecreated( new \DateTime('now')); 
+        $sortie->setDatecreated(new \DateTime('now'));
 
         $form->handleRequest($request);
 
@@ -50,13 +51,13 @@ class SortieController extends Controller
             $em->persist($sortie);
             $em->flush();
 
-            return $this->redirectToRoute('sortie_show', array('idsortie' => $sortie->getIdsortie()));
+            return $this->redirectToRoute('sortie_show', ['idsortie' => $sortie->getIdsortie()]);
         }
 
-        return $this->render('sortie/new.html.twig', array(
+        return $this->render('sortie/new.html.twig', [
             'sortie' => $sortie,
             'form' => $form->createView(),
-        ));
+        ]);
     }
 
     /**
@@ -69,10 +70,10 @@ class SortieController extends Controller
     {
         $deleteForm = $this->createDeleteForm($sortie);
 
-        return $this->render('sortie/show.html.twig', array(
+        return $this->render('sortie/show.html.twig', [
             'sortie' => $sortie,
             'delete_form' => $deleteForm->createView(),
-        ));
+        ]);
     }
 
     /**
@@ -90,14 +91,14 @@ class SortieController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('sortie_edit', array('idsortie' => $sortie->getIdsortie()));
+            return $this->redirectToRoute('sortie_edit', ['idsortie' => $sortie->getIdsortie()]);
         }
 
-        return $this->render('sortie/edit.html.twig', array(
+        return $this->render('sortie/edit.html.twig', [
             'sortie' => $sortie,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
-        ));
+        ]);
     }
 
     /**
@@ -130,7 +131,7 @@ class SortieController extends Controller
     private function createDeleteForm(Sortie $sortie)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('sortie_delete', array('idsortie' => $sortie->getIdsortie())))
+            ->setAction($this->generateUrl('sortie_delete', ['idsortie' => $sortie->getIdsortie()]))
             ->setMethod('DELETE')
             ->getForm()
         ;

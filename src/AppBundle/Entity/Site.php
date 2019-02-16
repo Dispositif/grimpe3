@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Site d'escalade
+ * Site d'escalade.
  *
  * @ORM\Table(name="site", indexes={@ORM\Index(name="site_fk1", columns={"sregion"})})
  * @ORM\Entity(repositoryClass="AppBundle\Repository\SiteRepository")
@@ -62,14 +62,14 @@ class Site
     private $adresse;
 
     /**
-     * @var boolean
+     * @var bool
      *
      * @ORM\Column(name="svalide", type="boolean", nullable=false)
      */
     private $svalide;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="siteid", type="integer")
      * @ORM\Id
@@ -87,12 +87,11 @@ class Site
      */
     private $sregion;
 
-
-
     /**
-     * Set sitenom
+     * Set sitenom.
      *
      * @param string $sitenom
+     *
      * @return Site
      */
     public function setSitenom($sitenom)
@@ -103,9 +102,9 @@ class Site
     }
 
     /**
-     * Get sitenom
+     * Get sitenom.
      *
-     * @return string 
+     * @return string
      */
     public function getSitenom()
     {
@@ -113,9 +112,10 @@ class Site
     }
 
     /**
-     * Set type
+     * Set type.
      *
      * @param string $type
+     *
      * @return Site
      */
     public function setType($type)
@@ -126,9 +126,9 @@ class Site
     }
 
     /**
-     * Get type
+     * Get type.
      *
-     * @return string 
+     * @return string
      */
     public function getType()
     {
@@ -136,9 +136,10 @@ class Site
     }
 
     /**
-     * Set longitude
+     * Set longitude.
      *
      * @param float $longitude
+     *
      * @return Site
      */
     public function setLongitude($longitude)
@@ -149,9 +150,9 @@ class Site
     }
 
     /**
-     * Get longitude
+     * Get longitude.
      *
-     * @return float 
+     * @return float
      */
     public function getLongitude()
     {
@@ -159,9 +160,10 @@ class Site
     }
 
     /**
-     * Set latitude
+     * Set latitude.
      *
      * @param float $latitude
+     *
      * @return Site
      */
     public function setLatitude($latitude)
@@ -172,9 +174,9 @@ class Site
     }
 
     /**
-     * Get latitude
+     * Get latitude.
      *
-     * @return float 
+     * @return float
      */
     public function getLatitude()
     {
@@ -182,9 +184,10 @@ class Site
     }
 
     /**
-     * Set description
+     * Set description.
      *
      * @param string $description
+     *
      * @return Site
      */
     public function setDescription($description)
@@ -195,9 +198,9 @@ class Site
     }
 
     /**
-     * Get description
+     * Get description.
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -205,9 +208,10 @@ class Site
     }
 
     /**
-     * Set ville
+     * Set ville.
      *
      * @param string $ville
+     *
      * @return Site
      */
     public function setVille($ville)
@@ -218,9 +222,9 @@ class Site
     }
 
     /**
-     * Get ville
+     * Get ville.
      *
-     * @return string 
+     * @return string
      */
     public function getVille()
     {
@@ -228,9 +232,10 @@ class Site
     }
 
     /**
-     * Set adresse
+     * Set adresse.
      *
      * @param string $adresse
+     *
      * @return Site
      */
     public function setAdresse($adresse)
@@ -241,9 +246,9 @@ class Site
     }
 
     /**
-     * Get adresse
+     * Get adresse.
      *
-     * @return string 
+     * @return string
      */
     public function getAdresse()
     {
@@ -251,9 +256,10 @@ class Site
     }
 
     /**
-     * Set svalide
+     * Set svalide.
      *
-     * @param boolean $svalide
+     * @param bool $svalide
+     *
      * @return Site
      */
     public function setSvalide($svalide)
@@ -264,9 +270,9 @@ class Site
     }
 
     /**
-     * Get svalide
+     * Get svalide.
      *
-     * @return boolean 
+     * @return bool
      */
     public function getSvalide()
     {
@@ -274,9 +280,9 @@ class Site
     }
 
     /**
-     * Get siteid
+     * Get siteid.
      *
-     * @return integer 
+     * @return int
      */
     public function getSiteid()
     {
@@ -284,9 +290,10 @@ class Site
     }
 
     /**
-     * Set sregion
+     * Set sregion.
      *
      * @param \AppBundle\Entity\Region $sregion
+     *
      * @return Site
      */
     public function setSregion(\AppBundle\Entity\Region $sregion = null)
@@ -297,9 +304,9 @@ class Site
     }
 
     /**
-     * Get sregion
+     * Get sregion.
      *
-     * @return \AppBundle\Entity\Region 
+     * @return \AppBundle\Entity\Region
      */
     public function getSregion()
     {

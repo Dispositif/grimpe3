@@ -1,22 +1,22 @@
 <?php
+
 // src/AppBundle/Controller/RegistrationController.php
 
 namespace AppBundle\Controller;
 
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use FOS\UserBundle\Controller\RegistrationController as BaseController;
-use FOS\UserBundle\Event\GetResponseUserEvent;
-use Symfony\Component\HttpFoundation\Request;
-use FOS\UserBundle\FOSUserEvents;
-use FOS\UserBundle\Event\FormEvent;
 use FOS\UserBundle\Event\FilterUserResponseEvent;
+use FOS\UserBundle\Event\FormEvent;
+use FOS\UserBundle\Event\GetResponseUserEvent;
+use FOS\UserBundle\FOSUserEvents;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Overriding FOSUserBundle Controller with the Membre entity
- * 
+ * Overriding FOSUserBundle Controller with the Membre entity.
+ *
  * http://symfony.com/doc/3.3/bundles/inheritance.html
  * https://github.com/FriendsOfSymfony/FOSUserBundle/blob/master/Resources/doc/overriding_controllers.rst
- * 
  */
 class RegistrationController extends BaseController
 {
@@ -51,11 +51,11 @@ class RegistrationController extends BaseController
 
                 // MES TRUCS A MOI
                 // php app/console fos:user:promote theusername ROLE_ADMIN
-                
-                $user->setPrenom( $user->getUsername() );
-                $user->setLastip( $_SERVER['REMOTE_ADDR'] );
 
-                $user->addRole( 'ROLE_USER' ); // ok. = default = a:0:{} 
+                $user->setPrenom($user->getUsername());
+                $user->setLastip($_SERVER['REMOTE_ADDR']);
+
+                $user->addRole('ROLE_USER'); // ok. = default = a:0:{}
                 //$user->setIsadmin( 0 );
 
                 //var_dump($user); //DEBUG
@@ -63,7 +63,6 @@ class RegistrationController extends BaseController
 
                 $userManager->updateUser($user);
 
-                
                 if (null === $response = $event->getResponse()) {
                     $url = $this->generateUrl('fos_user_registration_confirmed');
                     $response = new RedirectResponse($url);
@@ -82,8 +81,8 @@ class RegistrationController extends BaseController
             }
         }
 
-        return $this->render('@FOSUser/Registration/register.html.twig', array(
+        return $this->render('@FOSUser/Registration/register.html.twig', [
             'form' => $form->createView(),
-        ));
+        ]);
     }
 }

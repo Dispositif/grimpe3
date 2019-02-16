@@ -3,9 +3,9 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Region;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -27,9 +27,9 @@ class RegionController extends Controller
 
         $regions = $em->getRepository('AppBundle:Region')->findAll();
 
-        return $this->render('region/index.html.twig', array(
+        return $this->render('region/index.html.twig', [
             'regions' => $regions,
-        ));
+        ]);
     }
 
     /**
@@ -49,13 +49,13 @@ class RegionController extends Controller
             $em->persist($region);
             $em->flush();
 
-            return $this->redirectToRoute('region_show', array('rid' => $region->getRid()));
+            return $this->redirectToRoute('region_show', ['rid' => $region->getRid()]);
         }
 
-        return $this->render('region/new.html.twig', array(
+        return $this->render('region/new.html.twig', [
             'region' => $region,
             'form' => $form->createView(),
-        ));
+        ]);
     }
 
     /**
@@ -68,10 +68,10 @@ class RegionController extends Controller
     {
         $deleteForm = $this->createDeleteForm($region);
 
-        return $this->render('region/show.html.twig', array(
+        return $this->render('region/show.html.twig', [
             'region' => $region,
             'delete_form' => $deleteForm->createView(),
-        ));
+        ]);
     }
 
     /**
@@ -89,14 +89,14 @@ class RegionController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('region_edit', array('rid' => $region->getRid()));
+            return $this->redirectToRoute('region_edit', ['rid' => $region->getRid()]);
         }
 
-        return $this->render('region/edit.html.twig', array(
+        return $this->render('region/edit.html.twig', [
             'region' => $region,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
-        ));
+        ]);
     }
 
     /**
@@ -129,7 +129,7 @@ class RegionController extends Controller
     private function createDeleteForm(Region $region)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('region_delete', array('rid' => $region->getRid())))
+            ->setAction($this->generateUrl('region_delete', ['rid' => $region->getRid()]))
             ->setMethod('DELETE')
             ->getForm()
         ;

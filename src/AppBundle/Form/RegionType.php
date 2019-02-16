@@ -15,15 +15,15 @@ class RegionType extends AbstractType
     {
         $builder->add('rnom')->add('rlatitude')->add('rlongitude');
     }
-    
+
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Region'
-        ));
+        $resolver->setDefaults([
+            'data_class' => 'AppBundle\Entity\Region',
+        ]);
     }
 
     /**
@@ -33,6 +33,4 @@ class RegionType extends AbstractType
     {
         return 'appbundle_region';
     }
-
-
 }

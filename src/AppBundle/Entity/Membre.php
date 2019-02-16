@@ -4,22 +4,21 @@
 
 namespace AppBundle\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Membre entity
+ * Membre entity.
  *
- * Defini les utilisateurs (et admins). 
+ * Defini les utilisateurs (et admins).
  * Hérite de BaseUser du FOSUserBundle
- * 
+ *
  * @ORM\Entity(repositoryClass="AppBundle\Repository\MembreRepository")
  * @ORM\Table(name="fos_user")
  */
 class Membre extends BaseUser
 {
-
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -31,7 +30,7 @@ class Membre extends BaseUser
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=30, nullable=true)
-     * 
+     *
      * //Assert\NotBlank(message="Entrez un nom.", groups={"Registration", "Profile"})
      * //Assert\Length(
      *     min=3,
@@ -47,7 +46,6 @@ class Membre extends BaseUser
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=30, nullable=true)
-     *
      */
     protected $prenom;
 
@@ -100,9 +98,8 @@ class Membre extends BaseUser
      */
     protected $eval;
 
-
     /**
-     * Set nom
+     * Set nom.
      *
      * @param string $nom
      *
@@ -116,7 +113,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Get nom
+     * Get nom.
      *
      * @return string
      */
@@ -126,7 +123,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Set prenom
+     * Set prenom.
      *
      * @param string $prenom
      *
@@ -140,7 +137,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Get prenom
+     * Get prenom.
      *
      * @return string
      */
@@ -150,7 +147,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Set datecreated
+     * Set datecreated.
      *
      * @param \DateTime $datecreated
      *
@@ -164,7 +161,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Get datecreated
+     * Get datecreated.
      *
      * @return \DateTime
      */
@@ -174,7 +171,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Set lastip
+     * Set lastip.
      *
      * @param string $lastip
      *
@@ -188,7 +185,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Get lastip
+     * Get lastip.
      *
      * @return string
      */
@@ -198,7 +195,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Set telephone
+     * Set telephone.
      *
      * @param string $telephone
      *
@@ -212,7 +209,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Get telephone
+     * Get telephone.
      *
      * @return string
      */
@@ -222,7 +219,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Set avatar
+     * Set avatar.
      *
      * @param string $avatar
      *
@@ -236,7 +233,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Get avatar
+     * Get avatar.
      *
      * @return string
      */
@@ -246,7 +243,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Set niveaumin
+     * Set niveaumin.
      *
      * @param string $niveaumin
      *
@@ -260,7 +257,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Get niveaumin
+     * Get niveaumin.
      *
      * @return string
      */
@@ -270,7 +267,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Set niveaumax
+     * Set niveaumax.
      *
      * @param string $niveaumax
      *
@@ -284,7 +281,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Get niveaumax
+     * Get niveaumax.
      *
      * @return string
      */
@@ -293,9 +290,8 @@ class Membre extends BaseUser
         return $this->niveaumax;
     }
 
-
     /**
-     * Set eval
+     * Set eval.
      *
      * @param float $eval
      *
@@ -309,7 +305,7 @@ class Membre extends BaseUser
     }
 
     /**
-     * Get eval
+     * Get eval.
      *
      * @return float
      */

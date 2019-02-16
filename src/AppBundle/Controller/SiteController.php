@@ -3,9 +3,10 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Site;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Site controller.
@@ -26,13 +27,13 @@ class SiteController extends Controller
 
         $sites = $em->getRepository('AppBundle:Site')->findAll();
 
-        return $this->render('site/index.html.twig', array(
+        return $this->render('site/index.html.twig', [
             'sites' => $sites,
-        ));
+        ]);
     }
 
     /**
-     * Show a map of sites
+     * Show a map of sites.
      *
      * @Route("/map", name="site_map")
      * @Method({"GET"})
@@ -44,7 +45,6 @@ class SiteController extends Controller
 
         return $this->render('site/map.html.twig');
     }
-
 
     /**
      * Creates a new site entity.
@@ -63,13 +63,13 @@ class SiteController extends Controller
             $em->persist($site);
             $em->flush();
 
-            return $this->redirectToRoute('site_show', array('siteid' => $site->getSiteid()));
+            return $this->redirectToRoute('site_show', ['siteid' => $site->getSiteid()]);
         }
 
-        return $this->render('site/new.html.twig', array(
+        return $this->render('site/new.html.twig', [
             'site' => $site,
             'form' => $form->createView(),
-        ));
+        ]);
     }
 
     /**
@@ -82,19 +82,18 @@ class SiteController extends Controller
     {
         $deleteForm = $this->createDeleteForm($site);
 
-        // TODO BBcode 
+        // TODO BBcode
         // HACKED (à l'arrache)
         $description = $site->getDescription();
         $replace = [
-                '\r\n'  => '<br />',
-                '[h3]'   => '<h3>',
-                '[/h3]'  => '</h3>',
-                '[img]'  => '<div style="text-align:center"><img class="img-thumbnail" width="250" style="margin:20px;" src="',
+                '\r\n' => '<br />',
+                '[h3]' => '<h3>',
+                '[/h3]' => '</h3>',
+                '[img]' => '<div style="text-align:center"><img class="img-thumbnail" width="250" style="margin:20px;" src="',
                 '[/img]' => '" /></div>',
                 ];
         $description = str_replace(array_keys($replace), array_values($replace), $description);
-        $site->setDescription( $description);
-        
+        $site->setDescription($description);
 
         // Liste des sorties prochaines sur ce site
         $em = $this->getDoctrine()->getManager();
@@ -107,10 +106,11 @@ class SiteController extends Controller
                                 ->setParameter('site', $site)
                                 ->setMaxResults(10);
         $sorties = $query->getResult();
-        
+
         // var_dump($sorties);exit;
 
-        function timeto($time_stamp, $time_stamp2 = 'now') {
+        function timeto($time_stamp, $time_stamp2 = 'now')
+        {
             $res = '';
 
             $diff = abs(strtotime($time_stamp) - strtotime($time_stamp2));
@@ -133,24 +133,22 @@ class SiteController extends Controller
             if ($heures >= 2) {
                 return $heures.' heures';
             }
-            if ($heures == 1) {
+            if (1 === $heures) {
                 return 'plus d’une heure';
             }
 
             if ($minutes > 2) {
                 return $minutes.' minutes';
-            } else {
-                return 'à l’instant';
             }
+
+            return 'à l’instant';
         }
 
-        
-
-        return $this->render('site/show.html.twig', array(
+        return $this->render('site/show.html.twig', [
                                         'site' => $site,
                                         'delete_form' => $deleteForm->createView(),
-                                        'sorties' => $sorties
-        ));
+                                        'sorties' => $sorties,
+        ]);
     }
 
     /**
@@ -208,7 +206,7 @@ class SiteController extends Controller
     private function createDeleteForm(Site $site)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('site_delete', array('siteid' => $site->getSiteid())))
+            ->setAction($this->generateUrl('site_delete', ['siteid' => $site->getSiteid()]))
             ->setMethod('DELETE')
             ->getForm()
         ;

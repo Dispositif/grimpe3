@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Suivisortie
+ * Suivisortie.
  *
  * Pour gérer les participants à une sortie
  *
@@ -22,14 +22,14 @@ class Suivisortie
     private $ssdate;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="mode", type="integer", nullable=false)
      */
     private $mode;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="ssid", type="integer")
      * @ORM\Id
@@ -57,12 +57,11 @@ class Suivisortie
      */
     private $ssmembre;
 
-
-
     /**
-     * Set ssdate
+     * Set ssdate.
      *
      * @param \DateTime $ssdate
+     *
      * @return Suivisortie
      */
     public function setSsdate($ssdate)
@@ -73,9 +72,9 @@ class Suivisortie
     }
 
     /**
-     * Get ssdate
+     * Get ssdate.
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getSsdate()
     {
@@ -83,9 +82,10 @@ class Suivisortie
     }
 
     /**
-     * Set mode
+     * Set mode.
      *
-     * @param integer $mode
+     * @param int $mode
+     *
      * @return Suivisortie
      */
     public function setMode($mode)
@@ -96,9 +96,9 @@ class Suivisortie
     }
 
     /**
-     * Get mode
+     * Get mode.
      *
-     * @return integer 
+     * @return int
      */
     public function getMode()
     {
@@ -106,9 +106,9 @@ class Suivisortie
     }
 
     /**
-     * Get ssid
+     * Get ssid.
      *
-     * @return integer 
+     * @return int
      */
     public function getSsid()
     {
@@ -116,9 +116,10 @@ class Suivisortie
     }
 
     /**
-     * Set sssortie
+     * Set sssortie.
      *
      * @param \AppBundle\Entity\Sortie $sssortie
+     *
      * @return Suivisortie
      */
     public function setSssortie(\AppBundle\Entity\Sortie $sssortie = null)
@@ -129,9 +130,9 @@ class Suivisortie
     }
 
     /**
-     * Get sssortie
+     * Get sssortie.
      *
-     * @return \AppBundle\Entity\Sortie 
+     * @return \AppBundle\Entity\Sortie
      */
     public function getSssortie()
     {
@@ -139,9 +140,10 @@ class Suivisortie
     }
 
     /**
-     * Set ssmembre
+     * Set ssmembre.
      *
      * @param \AppBundle\Entity\Membre $ssmembre
+     *
      * @return Suivisortie
      */
     public function setSsmembre(\AppBundle\Entity\Membre $ssmembre = null)
@@ -152,9 +154,9 @@ class Suivisortie
     }
 
     /**
-     * Get ssmembre
+     * Get ssmembre.
      *
-     * @return \AppBundle\Entity\Membre 
+     * @return \AppBundle\Entity\Membre
      */
     public function getSsmembre()
     {
